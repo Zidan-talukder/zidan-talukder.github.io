@@ -327,7 +327,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
         <h1>MD. Zidan Talukder</h1>
         <div class="intro-text" style="margin-top:10px;color:var(--muted)">
           <p>Hi, I'm Zidan, a B.Sc. EEE graduate from United International University (UIU) with a passion for building intelligent robotic systems. My research interests lie in AI-driven autonomy, control algorithms, embedded systems, and power electronics.</p>
-          <p>My experience spans international robotics competitions (University Rover Challenge 2022, CanSat Competition 2024), developing ML-powered embedded systems like an EMG-controlled prosthetic hand, research in power electronics for solar-grid energy integration, and a dedicated AI/ML/DL internship.</p>
+          <p>My experience spans international robotics competitions (University Rover Challenge 2022, CanSat Competition 2024), developing ML-powered embedded systems like an EMG-controlled robotic hand, research in power electronics for solar-grid energy integration, and a dedicated AI/ML/DL internship.</p>
           <p>I am now channeling this experience into my goal of graduate study in Robotics & Intelligent Systems, actively working on projects that combine SLAM, path planning, and computer vision for real-world autonomy. I am currently seeking MS/PhD opportunities and am eager to collaborate.</p>
           <div class="intro-actions">
             <a class="btn small cv-link" href="https://drive.google.com/drive/folders/1I5BMITQXzDqAM0j8c44snPGD34gGrSar?usp=drive_link" target="_blank" rel="noopener"><span class="icon">📄</span><span class="label">Curriculum Vitae</span></a>
@@ -732,6 +732,11 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
   lastFocus = focusBack || document.activeElement;
   titleEl.textContent = title || 'Details';
   bodyEl.innerHTML = html || '';
+  // Reset scroll so every popup starts at the top
+    bodyEl.scrollTop = 0;                      // reset immediately
+    requestAnimationFrame(function(){          // and once more after it becomes visible
+      bodyEl.scrollTop = 0;
+    });
 
   /* NEW: make it feel like it opens from the Read more button */
   var trigger = focusBack || document.activeElement;
@@ -751,6 +756,8 @@ document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)
     document.body.classList.remove('rm-open');
     document.removeEventListener('keydown', trap);
     if(lastFocus && lastFocus.focus){ lastFocus.focus({preventScroll:true}); }
+  // Clean up scroll for next time
+     bodyEl.scrollTop = 0;
   }
   backdrop.addEventListener('mousedown', function(e){ if(e.target===backdrop) closeModal(); });
   backdrop.querySelector('.rm-close').addEventListener('click', closeModal);
