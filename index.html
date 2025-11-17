@@ -12,7 +12,7 @@
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
     header{position:sticky;top:0;z-index:1000;background:rgba(11,12,16,.85);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
     .header-inner{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:10px 12px}
     .topnav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
@@ -329,7 +329,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
       <div class="intro">
         <h1>MD. Zidan Talukder</h1>
         <div class="intro-text" style="margin-top:10px;color:var(--muted)">
-          <p>Hi, I'm Zidan, a B.Sc. EEE graduate from United International University (UIU) with a passion for building intelligent robotic systems. My research interests include AI-driven autonomy, machine learning, control algorithms, and electrical systems.</p>
+          <p>Hi, I'm Zidan, a B.Sc. EEE graduate from United International University (UIU) with a passion for building intelligent robotic systems. My research interests include AI-driven autonomy, robot learning, control algorithms. </p>
           <p>I have gained hands-on experience through international robotics competitions (University Rover Challenge 2022, CanSat Competition 2024), the development of ML-powered embedded systems such as an EMG-controlled robotic hand, research in power electronics for solar-grid integration, and a focused AI/ML/DL internship.</p>
           <p>Currently, I am channeling this experience into my goal of pursuing graduate studies in Robotics & Intelligent Systems. I am actively working on projects involving SLAM, path planning, and computer vision for real-world autonomy. I am seeking MS/PhD opportunities and am eager to collaborate.</p>
           <div class="intro-actions">
@@ -357,7 +357,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
               <p class="meta-line team-line"><span class="label">Team:</span> UIU CanSat — <span class="label">Role:</span> Team Lead — <span class="label">Generation:</span> 1st Gen (UIU ASTRO ’24)</p>
             </div>
             <ul class="cv-tight">
-              <li>Designed an autonomous operation for the CanSat (miniature satellite) using finite state machine and multi-sensor fusion (IMU, pressure, tilt, GPS, pitot tube, ultrasonic) to automate descent detection, heatshield release, and timed parachute deployment. [C++] </li>
+              <li>Designed an autonomous operation for the CanSat (miniature satellite) using state machine logic and multi-sensor fusion (IMU, pressure, tilt, GPS, pitot tube, ultrasonic) to automate descent detection, heatshield release, and timed parachute deployment. [C++] </li>
               <li>Conceptualized the physical structure and developed a physics-based design methodology for the aerobraking heatshield and parachute deployment system. Guided the design team in creating CAD models and ensured successful 3D printing within weight limits.</li>
               <li>Prepared technical documents and represented the team through presentations to judges in the USA.</li>
             </ul> 
@@ -459,7 +459,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
               <summary class="readmore"data-rm-title="Autonomous wildlife monitoring &amp; deterrence system"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
               <div class="acc-body">
                 
-                  <p>This project focuses on a significant challenge in human-wildlife coexistence: the real-time detection and mitigation of animal intrusions in residential or monitored areas. Initiated in collaboration with Abdullah Al masud, Research Engineer of Green University of Bangladesh on September 20, 2025, our goal is to develop a fully autonomous, ROS-based monitoring and deterence system.</p>
+                  <p>This project focuses on a significant challenge in human-wildlife coexistence: the real-time detection and mitigation of animal intrusions in residential or monitored areas. Initiated in collaboration with Abdullah Al masud, Research Engineer of Green University of Bangladesh on Novermber 2025. Our goal is to develop a fully autonomous, ROS-based monitoring and deterence system.</p>
                   <p><strong>Planned System Architecture:</strong> The designed system will be built on a two-part architecture. First, a fixed camera network will use computer vision algorithms to continuously scan for animals. Once a detection is confirmed and classified as non-human, the system will calculate it’s GPS Coordinate and send an immediate alert to a response team, including the animal’s location.
                      Simultaneously, the system will deploy an autonomous rover. The rover will receive the animal's GPS coordinates from the camera network and navigate to the area using SLAM (Simultaneous Localization and Mapping) for real-time positioning and dynamic obstacle avoidance.
                      Upon arrival, the rover's own vision system will take over to identify the species and track the animal's movements while maintaining a safe distance. Its primary role will be non-harmful deterrence, using methods like specific audible frequencies or flashing lights. Throughout the entire process, the rover will stream live video back to a local server, giving the human team full situational awareness before they arrive. </p>
