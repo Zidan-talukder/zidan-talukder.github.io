@@ -449,24 +449,21 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
             <div class="acc-head">
               <h3>Autonomous wildlife monitoring &amp; deterrence system  <span class="chip status ongoing">Ongoing</span></h3>
               <p class="acc-brief">Currently developing a ROS-based system where a camera network detects wildlife and autonomously deploys a rover for non-harmful deterrence. The rover utilizes SLAM and path planning for navigation and provides live video streaming to assist human response teams.</p>     
+              <details class="accordion mini">
+                <summary class="readmore"data-rm-title="Autonomous wildlife monitoring &amp; deterrence system"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
+                  <div class="acc-body">     
+                    <p>This project focuses on a significant challenge in human-wildlife coexistence: the real-time detection and mitigation of animal intrusions in residential or monitored areas. Initiated in collaboration with Abdullah Al masud, Research Engineer of Green University of Bangladesh on Novermber 2025. Our goal is to develop a fully autonomous, ROS-based monitoring and deterence system.</p>
+                    <p><strong>Planned System Architecture:</strong> The designed system will be built on a two-part architecture. First, a fixed camera network will use computer vision algorithms to continuously scan for animals. Once a detection is confirmed and classified as non-human, the system will calculate it’s GPS Coordinate and send an immediate alert to a response team, including the animal’s location.
+                       Simultaneously, the system will deploy an autonomous rover. The rover will receive the animal's GPS coordinates from the camera network and navigate to the area using SLAM (Simultaneous Localization and Mapping) for real-time positioning and dynamic obstacle avoidance.
+                       Upon arrival, the rover's own vision system will take over to identify the species and track the animal's movements while maintaining a safe distance. Its primary role will be non-harmful deterrence, using methods like specific audible frequencies or flashing lights. Throughout the entire process, the rover will stream live video back to a local server, giving the human team full situational awareness before they arrive. </p>
+                    <p><strong>Current Status & Development Strategy:</strong> We are currently in the foundational research and simulation phase. Our focus is on the core algorithms, including SLAM methodologies, the NAV2 path-planning stack, and modern computer vision models like YOLO. We are building and validating the system's architecture through simulations in Gazebo and RViz. This disciplined approach is designed to produce a compelling simulation to secure funding for this project.</p>
+                  </div>
+              </details>         
             </div>         
           </div>
          <figure class="entry-media ar-4-3">
             <img src="Wild43.png" alt="UGV and camera setup for wildlife intrusion response" loading="lazy" decoding="async" width="1600" height="1200" srcset="Wild43.png 800w, Wild43.png 1600w, Wild43.png 1200w" sizes="(min-width: 860px) 300px, 96vw">
          </figure>
-
-         <details class="accordion mini">
-              <summary class="readmore"data-rm-title="Autonomous wildlife monitoring &amp; deterrence system"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
-              <div class="acc-body">
-                
-                  <p>This project focuses on a significant challenge in human-wildlife coexistence: the real-time detection and mitigation of animal intrusions in residential or monitored areas. Initiated in collaboration with Abdullah Al masud, Research Engineer of Green University of Bangladesh on Novermber 2025. Our goal is to develop a fully autonomous, ROS-based monitoring and deterence system.</p>
-                  <p><strong>Planned System Architecture:</strong> The designed system will be built on a two-part architecture. First, a fixed camera network will use computer vision algorithms to continuously scan for animals. Once a detection is confirmed and classified as non-human, the system will calculate it’s GPS Coordinate and send an immediate alert to a response team, including the animal’s location.
-                     Simultaneously, the system will deploy an autonomous rover. The rover will receive the animal's GPS coordinates from the camera network and navigate to the area using SLAM (Simultaneous Localization and Mapping) for real-time positioning and dynamic obstacle avoidance.
-                     Upon arrival, the rover's own vision system will take over to identify the species and track the animal's movements while maintaining a safe distance. Its primary role will be non-harmful deterrence, using methods like specific audible frequencies or flashing lights. Throughout the entire process, the rover will stream live video back to a local server, giving the human team full situational awareness before they arrive. </p>
-                  <p><strong>Current Status & Development Strategy:</strong> We are currently in the foundational research and simulation phase. Our focus is on the core algorithms, including SLAM methodologies, the NAV2 path-planning stack, and modern computer vision models like YOLO. We are building and validating the system's architecture through simulations in Gazebo and RViz. This disciplined approach is designed to produce a compelling simulation to secure funding for this project.</p>
-                
-            </div>
-          </details>
 
         </div>
       </div>
@@ -476,24 +473,25 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
             <div class="acc-head">
               <h3>sEMG Signal-based Prosthetic Hand Control using Embedded ML (Tiny ML) with Deep Neural Network <span class="chip status capstone">Capstone Project</span></h3>
               <p class="acc-brief">Controlled a robotic hand using EMG signals via a novel forearm electrode placement strategy and a custom signal processing algorithm. A CNN was trained to learn complex signal patterns for classifying four distinct hand gestures and deployed as a TinyML model on a low-cost embedded device, achieving 87.5% accuracy on real-time performance.</p>
+              <details class="accordion mini">
+                <summary class="readmore"data-rm-title="EMG signal processing and hand control using DNN"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
+                <div class="acc-body">
+                  <p>This project was conducted in collaboration with a startup company (Electro medical solutions) aiming to pioneer research in affordable biomedical robotics in Bangladesh. Our goal was to create a functional and cost-effective Ai-driven control system for a robotic/prosthetic hand using surface Electromyography (sEMG) signals, overcoming the cost barriers of traditional high-compute solutions.</p>
+                  <p>The system's development followed a meticulous, research-driven pipeline:</p>
+                  <p>1. Novel Sensor Placement Strategy: The project began with extensive research into the anatomical and physiological structure of the human forearm, studying muscle groups and tendon movement to determine optimal signal acquisition points. This foundational research led to the development of a novel, multi-band electrode strategy, with sensors placed strategically on the forearm. This approach captured a comprehensive set of muscle activation patterns, providing richer data for accurate gesture classification compared to traditional single-location methods.</p>
+                  <p>2. Signal Acquisition & Advanced Pre-processing: Raw sEMG signals from the sensors were processed through a custom signal processing algorithm. This step was critical for filtering noise, amplifying relevant features, and preparing clean signal for the machine learning model.</p>
+                  <p>3. Deep Learning Model Development: After pre-processing, a Convolutional Neural Network (CNN) was trained with the processed signals to learn the complex patterns of the signals for accurately classifying four distinct hand gestures.The model was trained on 200 test data instances with a learning rate set at 0.0005. In the final classification stage, two additional dense layers were incorporated, each comprising 20 neurons.</p>
+                  <p>4. TinyML Deployment for Real-Time Inference: To achieve a truly low-cost and portable system, I converted the trained CNN into a smaller, optimized Deep Neural Network (DNN) and deployed it onto a low-power microcontroller using Edge Impulse (built on TensorFlow Lite)— this process known as TinyML. This eliminated the need for a continuous connection to a desktop computer or a high-cost embedded platform.</p>
+                  <p>5. System Integration & Performance: The entire inference pipeline runs in real-time on the microcontroller. The system analyzes incoming sEMG signals and triggers the corresponding finger movement with minimal latency. This achieved a classification accuracy of 87.5% on real time perfomance.</p>
+                  <p><strong>Impact & Achievement:</strong> This work successfully demonstrated a significant reduction in system cost and increase in portability without compromising on performance. The project's novelty and success were recognized through multiple awards and its publication in an IEEE conference, validating its contribution to the field of accessible biomedical robotics.</p>
+                </div>
+              </details>        
             </div>
           </div>
           <figure class="entry-media ar-4-3">
             <img src="prosthetic_hand43.jpg" alt="sEMG prosthetic hand prototype" loading="lazy" decoding="async" width="1600" height="1200" srcset="prosthetic_hand43.jpg 800w, prosthetic_hand43.jpg 1600w, prosthetic_hand43.jpg 1200w" sizes="(min-width: 860px) 300px, 96vw">
           </figure>
-          <details class="accordion mini">
-            <summary class="readmore"data-rm-title="EMG signal processing and hand control using DNN"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
-            <div class="acc-body">
-              <p>This project was conducted in collaboration with a startup company (Electro medical solutions) aiming to pioneer research in affordable biomedical robotics in Bangladesh. Our goal was to create a functional and cost-effective Ai-driven control system for a robotic/prosthetic hand using surface Electromyography (sEMG) signals, overcoming the cost barriers of traditional high-compute solutions.</p>
-              <p>The system's development followed a meticulous, research-driven pipeline:</p>
-              <p>1. Novel Sensor Placement Strategy: The project began with extensive research into the anatomical and physiological structure of the human forearm, studying muscle groups and tendon movement to determine optimal signal acquisition points. This foundational research led to the development of a novel, multi-band electrode strategy, with sensors placed strategically on the forearm. This approach captured a comprehensive set of muscle activation patterns, providing richer data for accurate gesture classification compared to traditional single-location methods.</p>
-              <p>2. Signal Acquisition & Advanced Pre-processing: Raw sEMG signals from the sensors were processed through a custom signal processing algorithm. This step was critical for filtering noise, amplifying relevant features, and preparing clean signal for the machine learning model.</p>
-              <p>3. Deep Learning Model Development: After pre-processing, a Convolutional Neural Network (CNN) was trained with the processed signals to learn the complex patterns of the signals for accurately classifying four distinct hand gestures.The model was trained on 200 test data instances with a learning rate set at 0.0005. In the final classification stage, two additional dense layers were incorporated, each comprising 20 neurons.</p>
-              <p>4. TinyML Deployment for Real-Time Inference: To achieve a truly low-cost and portable system, I converted the trained CNN into a smaller, optimized Deep Neural Network (DNN) and deployed it onto a low-power microcontroller using Edge Impulse (built on TensorFlow Lite)— this process known as TinyML. This eliminated the need for a continuous connection to a desktop computer or a high-cost embedded platform.</p>
-              <p>5. System Integration & Performance: The entire inference pipeline runs in real-time on the microcontroller. The system analyzes incoming sEMG signals and triggers the corresponding finger movement with minimal latency. This achieved a classification accuracy of 87.5% on real time perfomance.</p>
-              <p><strong>Impact & Achievement:</strong> This work successfully demonstrated a significant reduction in system cost and increase in portability without compromising on performance. The project's novelty and success were recognized through multiple awards and its publication in an IEEE conference, validating its contribution to the field of accessible biomedical robotics.</p>
-            </div>
-          </details>
+          
           <div class="xp-links">Links: <a href="https://drive.google.com/drive/folders/1UjumCzCxw0wH8LS76BJSSxiu5DFJg4Xv?usp=sharing" target="_blank" rel="noopener">📄 Publication</a> 
             <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link" target="_blank" rel="noopener">🎥 Demo Video</a>
           </div>
