@@ -303,6 +303,25 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
   .site-note strong{color: #48d2d2}
   .custom-heading {
   color: #4bfffc; /* pick your color */
+    
+    .courses-list {
+    padding-left: 0.9rem !important;
+    margin-left: 0 !important;
+  }
+
+  .ach-row {
+  display: flex;       /* make it flex container */
+  gap: 10px;           /* optional space between items */
+  flex-wrap: wrap;     /* allows wrapping if screen is small */
+}
+.entry.left {
+  flex: 3; /* takes 3 parts out of 5 */
+  padding: 20px; 
+}
+.entry.right {
+  flex: 2;       /* fixed 40% width */
+  padding: 20px;
+}
   }
 </style>
 </head>
@@ -574,14 +593,31 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
     </section>
     <section class="section" id="pubs">
       <h2 class="sec-title"><span class="ico" aria-hidden="true">📚</span> Publications</h2>
-      <ul>
-         <li>Ahsan Rafiq, <strong>Zidan Talukder</strong>, Asgar Hamim, Jannatul Firdous, Khawza Iftekhar Uddin Ahmed, “sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural Network,” <em>ICEEICT 2024</em>.[IEEE Xplorer]<a class="chip doi" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank" rel="noopener"> DOI: 10.1109/ICEEICT62016.2024.10534475</a></li>
-      </ul>
+      <div class="entry">
+        <h3>Submitted / In-Preparation</h3>
+          <ul class="courses-list">
+            <li><strong>[Manuscript to be Submitted]</strong> Zaman A., Masud A., Hossain A., <Strong>Talukder Z.,</Strong> Airin A., et al. “Development of a Mars Rover Prototype: Autonomous Navigation and Life Exploration,” 
+              <em>Targeting: IEEE Systems Journals / IEEE Access</em>, Expected Submission: Jan 2026 <a class="chip doi" href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link" target="_blank" rel="noopener"> View Draft</a>
+            </li>
+            <p>
+              <li><strong>[Manuscript to be Submitted] Talukder Z.,</strong>Saad A., Tahmid E., Prince S., Orchi A., Muneer S., et al. "Aerodynamic Stability Analysis of Planetary Probes: A Comparative Study of Deployable Heat Shields versus Auto-Gyro Rotors"
+                <em>Targeting: IEEE Aerospace Conference,</em>Expected Submission: March 2026. <a class="chip doi" href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link" target="_blank" rel="noopener"> View Heatshield Design Report</a>
+              </li>
+            </p>
+          </ul>
+      </div>
+      <div class="entry">
+        <h3>Conference</h3>
+          <ul class="courses-list">
+            <li>Rafiq A., <strong>Talukder Z.</strong>, Hamim A., Firdous j., Ahmed K.I.U., “sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural Network,” 
+                <em>6th International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT),</em>2024. [IEEE Xplore] <a class="chip doi" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank" rel="noopener"> DOI: 10.1109/ICEEICT62016.2024.10534475</a></li>
+          </ul>
+      </div>
     </section>
     <section class="section" id="achievements">
       <h2 class="sec-title"><span class="ico" aria-hidden="true">🏅</span> Achievements</h2>
-      <div class="grid2">
-        <div class="entry">
+      <div class="ach-row">
+        <div class="entry left">
           <h3>Honors &amp; Awards</h3>
             <ul class="awards-list">
               <li>CanSat Competition 2024 —  Among 80 teams 11th globally (3rd Asia). [<a class="accent-link" href="https://drive.google.com/file/d/174V8E3uB8rC7WFrD53Gc_2HQWI-d5TNQ/view?usp=sharing" target="_blank" rel="noopener">Ranking</a>]</li>
@@ -591,7 +627,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
               <li>Merit-based Scholarships — United International University. [<a class="accent-link" href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing" target="_blank" rel="noopener">Certificate</a>]</li>
             </ul>
         </div>
-        <div class="entry">
+        <div class="entry right">
           <h3>Grants</h3>
             <p class="grants-group"><strong>1. Travel Grants:</strong> [<a class="accent-link" href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link" target="_blank" rel="noopener">Letter</a>]</p>
             <ul class="grants-list">
