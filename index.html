@@ -460,7 +460,7 @@ details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
               <h3>sEMG Signal-based Prosthetic Hand Control using Embedded ML (Tiny ML) with Deep Neural Network <span class="chip status capstone">Capstone Project</span></h3>
               <ul class="cv-tight">
                 <li>Developed the complete sEMG signal preprocessing pipeline (filtering, rectification, smoothing, and windowing) to produce robust inputs for gesture recognition in a bio-robotic hand control project. </li>
-                <li>Implemented the full Edge Impulse TinyML workflow by streaming preprocessed sEMG data and utilizing FFT for initial spectral analysis before training a Dense DNN/MLP for feature extraction and classification of 4 hand gestures (97.2% accuracy). Optimized and deployed the C++ model to an Arduino BLE 33, achieving 87.6% real-time on-device inference.</li>
+                <li>Implemented a full Edge Impulse TinyML workflow by streaming preprocessed sEMG data and applying FFT for spectral analysis. Trained a Deep Neural Network (DNN) on the resulting spectral data to extract features and classify 4 hand gestures (97.2% accuracy), and deployed the optimized C++ model to an Arduino Nano 33 BLE, achieving 87.6% real-time inference accuracy.</li>
               </ul>
               <div class="xp-links">Links: <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank" rel="noopener">📄 Paper</a> 
                <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link" target="_blank" rel="noopener">🎥 Demo Video</a>
