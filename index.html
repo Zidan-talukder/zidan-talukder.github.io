@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MD. Zidan Talukder — Portfolio</title>
-  <meta name="description" content="Portfolio of MD. Zidan Talukder — Robotics, AI, Signal Processing, Power Electronics." />
+  <meta name="description"
+    content="Portfolio of MD. Zidan Talukder — Robotics, AI, Signal Processing, Power Electronics." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,36 +30,123 @@
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; }
-    .serif { font-family: 'DM Serif Display', serif; }
-    .nav-link { transition: color 0.15s, border-color 0.15s; }
-    .nav-link:hover { color: #1a56db; }
-    .nav-link.active { color: #1a56db; border-bottom: 2px solid #1a56db; }
-    .entry-card { }
-    .pill { display: inline-block; }
-    .comp-img img { transition: transform 0.3s; }
-    .comp-img:hover img { transform: scale(1.03); }
-    .fab-pop { display: none; }
-    .fab-pop.open { display: block; }
-    @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
-    .fade-up { animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) both; }
-    .fade-up-1 { animation-delay: 0.05s; }
-    .fade-up-2 { animation-delay: 0.15s; }
-    .fade-up-3 { animation-delay: 0.25s; }
-    .section-line { position: relative; }
-    .section-line::before { content:''; position:absolute; left:0; top:0; height:3px; width:32px; background:#1a56db; border-radius:2px; }
-    .doi-chip { display:inline-flex; align-items:center; background:#eff6ff; color:#1a56db; border:1px solid #bfdbfe; border-radius:4px; padding:1px 8px; font-size:11px; font-weight:500; text-decoration:none; margin-left:6px; }
-    .doi-chip:hover { background:#dbeafe; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .serif {
+      font-family: 'DM Serif Display', serif;
+    }
+
+    .nav-link {
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .nav-link:hover {
+      color: #1a56db;
+    }
+
+    .nav-link.active {
+      color: #1a56db;
+      border-bottom: 2px solid #1a56db;
+    }
+
+    .entry-card {}
+
+    .pill {
+      display: inline-block;
+    }
+
+    .comp-img img {
+      transition: transform 0.3s;
+    }
+
+    .comp-img:hover img {
+      transform: scale(1.03);
+    }
+
+    .fab-pop {
+      display: none;
+    }
+
+    .fab-pop.open {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.55s cubic-bezier(.22, 1, .36, 1) both;
+    }
+
+    .fade-up-1 {
+      animation-delay: 0.05s;
+    }
+
+    .fade-up-2 {
+      animation-delay: 0.15s;
+    }
+
+    .fade-up-3 {
+      animation-delay: 0.25s;
+    }
+
+    .section-line {
+      position: relative;
+    }
+
+    .section-line::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 3px;
+      width: 32px;
+      background: #1a56db;
+      border-radius: 2px;
+    }
+
+    .doi-chip {
+      display: inline-flex;
+      align-items: center;
+      background: #eff6ff;
+      color: #1a56db;
+      border: 1px solid #bfdbfe;
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 11px;
+      font-weight: 500;
+      text-decoration: none;
+      margin-left: 6px;
+    }
+
+    .doi-chip:hover {
+      background: #dbeafe;
+    }
   </style>
 </head>
+
 <body class="bg-white text-gray-900 antialiased">
 
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
     <div class="max-w-5xl mx-auto px-5">
       <nav class="flex items-center justify-between py-3">
-        <span class="serif text-lg text-gray-900 tracking-tight">Zidan Talukder</span>
+        <a href="#home"><img src="robot.png" alt="Zidan Talukder" class="h-12 w-auto"></a>
         <div class="hidden md:flex items-center gap-1 text-sm font-medium text-gray-500">
           <a href="#home" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">About</a>
           <a href="#competitions" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Competitions</a>
@@ -64,10 +155,13 @@
           <a href="#pubs" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Publications</a>
           <a href="#achievements" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Achievements</a>
           <a href="#personal" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Background</a>
+          <!-- <a href="#gallery" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Gallery</a> -->
         </div>
         <!-- mobile hamburger placeholder -->
         <button id="menuBtn" class="md:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </nav>
       <!-- Mobile menu -->
@@ -79,6 +173,7 @@
         <a href="#pubs" class="block px-3 py-2 rounded-md hover:bg-gray-50">Publications</a>
         <a href="#achievements" class="block px-3 py-2 rounded-md hover:bg-gray-50">Achievements</a>
         <a href="#personal" class="block px-3 py-2 rounded-md hover:bg-gray-50">Background</a>
+        <!-- <a href="#gallery" class="block px-3 py-2 rounded-md hover:bg-gray-50">Gallery</a> -->
       </div>
     </div>
   </header>
@@ -90,34 +185,39 @@
       <div class="md:col-span-2 flex justify-center md:justify-start">
         <div class="relative">
           <div class="absolute inset-0 rounded-2xl bg-blue-100 translate-x-3 translate-y-3"></div>
-          <img src="Picture1_X.jpg" alt="MD. Zidan Talukder" class="relative w-56 md:w-full rounded-2xl object-cover shadow-sm border border-gray-100">
+          <img src="Picture1_X.jpg" alt="MD. Zidan Talukder"
+            class="relative w-56 md:w-full rounded-2xl object-cover shadow-sm border border-gray-100">
         </div>
       </div>
       <div class="md:col-span-3 fade-up fade-up-1">
-        <p class="text-sm font-medium text-blue-600 tracking-widest uppercase mb-3">Robotics Engineer</p>
         <h1 class="serif text-4xl md:text-5xl leading-tight mb-5 text-gray-900">MD. Zidan<br><em>Talukder</em></h1>
         <p class="text-gray-500 leading-relaxed mb-3 text-[15px]">
-          I build intelligent, autonomous systems. My hands-on experience spans international competitions — the University Rover Challenge (Field Robotics) and CanSat Competition (Space Autonomy) — and embedded ML solutions like an EMG-controlled robotic hand.
+          I build intelligent, autonomous systems. My hands-on experience spans international competitions — the
+          University Rover Challenge (Field Robotics) and CanSat Competition (Space Autonomy) — and embedded ML
+          solutions like an EMG-controlled robotic hand.
         </p>
         <p class="text-gray-400 text-sm leading-relaxed mb-7">
-          Currently expanding expertise in robot learning: SLAM, path planning, and computer vision for deployed autonomy.
+          Currently expanding expertise in robot learning: SLAM, path planning, and computer vision for deployed
+          autonomy.
         </p>
         <div class="flex flex-wrap gap-3">
           <a href="https://drive.google.com/file/d/1z20UEKb-9ltn-S-wSXEI25ILiuOmzFNY/view?usp=sharing" target="_blank"
-             class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors">
+            class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors">
             <span>📄</span> Curriculum Vitae
             <span class="opacity-70 text-xs">Apr 2026</span>
           </a>
-          <a href="https://drive.google.com/file/d/1VkSFmFV4nJXqQtxbAi1pNF7o52orfUJz/view?usp=drive_link" target="_blank"
-             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+          <a href="https://drive.google.com/file/d/1VkSFmFV4nJXqQtxbAi1pNF7o52orfUJz/view?usp=drive_link"
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🔗 Transcript
           </a>
           <a href="https://drive.google.com/file/d/16_YF5sX-jdS2l96_J2gGEecetvfKdnmZ/view?usp=sharing" target="_blank"
-             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+            class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🔗 Recommendation Letters
           </a>
-          <a href="https://drive.google.com/file/d/1e-BK-LIoHOYalHuxkz_nrfV4NPLvYuk0/view?usp=drive_link" target="_blank"
-             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+          <a href="https://drive.google.com/file/d/1e-BK-LIoHOYalHuxkz_nrfV4NPLvYuk0/view?usp=drive_link"
+            target="_blank"
+            class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🎖️ IELTS
           </a>
         </div>
@@ -136,99 +236,76 @@
       <div class="space-y-6">
 
         <!-- CanSat -->
-        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden">
-          <!-- Card header strip -->
-          <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-lg font-semibold text-gray-900 leading-tight">CanSat Competition 2024</h3>
-              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-                <span class="flex items-center gap-1"><span>📍</span> Virginia, USA</span>
-                <span class="text-gray-300">|</span>
-                <span>Team Lead &mdash; UIU CanSat</span>
-                <span class="text-gray-300">|</span>
-                <span>Jan &ndash; Jul 2024</span>
-                <span class="text-gray-300">|</span>
-                <a href="https://www.cansatcompetition.com" target="_blank" class="text-accent hover:underline">Official site ↗</a>
-              </div>
-              <p class="text-xs text-gray-400">Organizers: American Astronautical Society &middot; U.S. Naval Research Laboratory &middot; NASA</p>
-            </div>
-            <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
-              🏆 11th Global &middot; 3rd Asia
-            </span>
+        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
+          <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
+            <img src="CanSat.png" alt="UIU CanSat 2024" class="w-full h-full object-contain">
           </div>
-          <!-- Card body -->
-          <div class="p-6 md:p-8">
-            <div class="grid md:grid-cols-5 gap-8 items-start">
-              <!-- Bullet points — wider column -->
-              <ul class="md:col-span-3 space-y-4">
-                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                  <span>Led development of <strong class="text-gray-800 font-medium">ASTRO</strong>, an atmospheric probe. Designed the autonomous control system using state machine logic and multi-sensor fusion (IMU, pressure, ultrasonic, GPS) to automate descent detection, heatshield release, and timed parachute deployment. [C++]</span>
-                </li>
-                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                  <span>Developed physics-based modeling to optimize sizing and descent stability of the aerobraking heatshield and parachute systems. Guided CAD modeling and 3D printing within weight limits.</span>
-                </li>
-                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                  <span>Managed project logistics, wrote technical documents, and delivered judge presentations in the USA.</span>
-                </li>
-              </ul>
-              <!-- Image — narrower column -->
-              <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
-                <img src="CanSat.png" alt="UIU CanSat 2024" class="w-full h-full object-contain p-2">
+          <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-gray-900 leading-tight">CanSat Competition 2024</h3>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                  <span class="flex items-center gap-1"><span>📍</span> Virginia, USA</span>
+                  <span class="text-gray-300">|</span>
+                  <span>Team Lead &mdash; UIU CanSat</span>
+                  <span class="text-gray-300">|</span>
+                  <span>Jan &ndash; Jul 2024</span>
+                  <span class="text-gray-300">|</span>
+                  <a href="https://www.cansatcompetition.com" target="_blank"
+                    class="text-accent hover:underline">Official site ↗</a>
+                </div>
+                <p class="text-xs text-gray-400">Organizers: American Astronautical Society &middot; U.S. Naval Research
+                  Laboratory &middot; NASA</p>
               </div>
+              <span
+                class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+                🏆 11th Global &middot; 3rd Asia
+              </span>
             </div>
-            <!-- Links row -->
-            <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
-              <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Technical Design Report</a>
-              <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Flight Video</a>
-              <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">&lt;/&gt; Code</a>
+            <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
+              <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link"
+                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Technical Design
+                Report</a>
+              <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing"
+                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Flight Video</a>
+              <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank"
+                class="inline-flex items-center gap-1.5 text-accent hover:underline">&lt;/&gt; Code</a>
             </div>
           </div>
         </div>
 
         <!-- URC -->
-        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden">
-          <!-- Card header strip -->
-          <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div class="flex flex-col gap-1">
-              <h3 class="text-lg font-semibold text-gray-900 leading-tight">University Rover Challenge 2022</h3>
-              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-                <span class="flex items-center gap-1"><span>📍</span> Utah, USA</span>
-                <span class="text-gray-300">|</span>
-                <span>Science Team Lead &mdash; UIU Mars Rover</span>
-                <span class="text-gray-300">|</span>
-                <span>May 2021 &ndash; Aug 2022</span>
-                <span class="text-gray-300">|</span>
-                <a href="https://urc.marssociety.org" target="_blank" class="text-accent hover:underline">Official site ↗</a>
-              </div>
-              <p class="text-xs text-gray-400">Organizers: The Mars Society</p>
-            </div>
-            <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
-              🏆 13th Global &middot; 1st Asia
-            </span>
+        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
+          <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
+            <img src="Rover43.jpeg" alt="UIU Mars Rover" class="w-full h-full object-contain">
           </div>
-          <!-- Card body -->
-          <div class="p-6 md:p-8">
-            <div class="grid md:grid-cols-5 gap-8 items-start">
-              <ul class="md:col-span-3 space-y-4">
-                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                  <span>Led scientific exploration subsystem for <strong class="text-gray-800 font-medium">MAVEN</strong>. Designed a multi-biomolecule life-detection protocol and built a VGG-16-based CNN fusing mVOC sensors and microscopic data to classify life potential into three tiers (Extant / Extinct / NPL).</span>
-                </li>
-                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                  <span>Developed a teleoperated 3-DoF manipulator integrated with an on-board scientific analysis chamber for soil and rock classification — chemical testing, high-resolution imaging, and environmental sensing.</span>
-                </li>
-              </ul>
-              <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
-                <img src="Rover43.jpeg" alt="UIU Mars Rover" class="w-full h-full object-contain p-2">
+          <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold text-gray-900 leading-tight">University Rover Challenge 2022</h3>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                  <span class="flex items-center gap-1"><span>📍</span> Utah, USA</span>
+                  <span class="text-gray-300">|</span>
+                  <span>Science Team Lead &mdash; UIU Mars Rover</span>
+                  <span class="text-gray-300">|</span>
+                  <span>May 2021 &ndash; Aug 2022</span>
+                  <span class="text-gray-300">|</span>
+                  <a href="https://urc.marssociety.org" target="_blank" class="text-accent hover:underline">Official
+                    site ↗</a>
+                </div>
+                <p class="text-xs text-gray-400">Organizers: The Mars Society</p>
               </div>
+              <span
+                class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+                🏆 13th Global &middot; 1st Asia
+              </span>
             </div>
-            <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
-              <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Science Plan Report</a>
-              <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Field Video</a>
+            <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
+              <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link"
+                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Science Plan
+                Report</a>
+              <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank"
+                class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Field Video</a>
             </div>
           </div>
         </div>
@@ -244,56 +321,41 @@
         <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Capstone Project</h2>
       </div>
 
-      <div class="rounded-2xl border border-gray-100 overflow-hidden">
-        <!-- Header strip — mirrors competitions cards -->
-        <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div class="flex flex-col gap-1">
-            <h3 class="text-lg font-semibold text-gray-900 leading-tight">sEMG Signal-based Prosthetic Hand Control using Embedded ML (TinyML) with Deep Neural Network</h3>
-            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-              <span>Dept. of EEE, UIU</span>
-              <span class="text-gray-300">|</span>
-              <span>Spring 2023</span>
-              <span class="text-gray-300">|</span>
-              <span>Arduino Nano 33 BLE &middot; Edge Impulse &middot; C++</span>
-            </div>
-          </div>
-          <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
-            🎖️ Best Capstone Award
-          </span>
+      <div class="rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
+        <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
+          <img src="prosthetic_hand43.jpg" alt="sEMG Prosthetic Hand" class="w-full h-full object-contain">
         </div>
-
-        <!-- Card body -->
-        <div class="p-6 md:p-8">
-          <div class="grid md:grid-cols-5 gap-8 items-start">
-            <!-- Bullets -->
-            <ul class="md:col-span-3 space-y-4">
-              <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                <span>Developed the complete sEMG signal preprocessing pipeline (filtering, rectification, smoothing, windowing) to produce robust inputs for gesture recognition in a bio-robotic hand control system.</span>
-              </li>
-              <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-                <span>Implemented a full Edge Impulse TinyML workflow with FFT spectral analysis. Trained a DNN to classify 4 gestures (<strong class="text-gray-800 font-medium">97.2% accuracy</strong>) and deployed the optimized C++ model to Arduino Nano 33 BLE — achieving <strong class="text-gray-800 font-medium">87.6% real-time accuracy</strong>.</span>
-              </li>
-            </ul>
-
-            <!-- Image — object-contain so the full hand is visible -->
-            <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
-              <img src="prosthetic_hand43.jpg" alt="sEMG Prosthetic Hand" class="w-full h-full object-contain p-2">
+        <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-semibold text-gray-900 leading-tight">sEMG Signal-based Prosthetic Hand Control
+                using Embedded ML (TinyML) with Deep Neural Network</h3>
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                <span>Dept. of EEE, UIU</span>
+                <span class="text-gray-300">|</span>
+                <span>Spring 2023</span>
+                <span class="text-gray-300">|</span>
+                <span>Arduino Nano 33 BLE &middot; Edge Impulse &middot; C++</span>
+              </div>
             </div>
+            <span
+              class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+              🎖️ Best Capstone Award
+            </span>
           </div>
-
-          <!-- Links -->
-          <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
-            <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Paper</a>
-            <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Demo Video</a>
+          <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
+            <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank"
+              class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Paper</a>
+            <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link"
+              target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Demo Video</a>
           </div>
         </div>
       </div>
 
       <p class="text-sm text-gray-400 mt-4">
         <strong class="text-gray-600">Undergraduate Projects:</strong>
-        <a href="https://drive.google.com/file/d/1D_IOPqm68PkJXHAhYom1QU3zNjrdB5V/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Link]</a>
+        <a href="https://drive.google.com/file/d/1D_IOPqm68PkJXHAhYom1QU3zNjrdB5V/view?usp=drive_link" target="_blank"
+          class="text-accent hover:underline ml-1">[Link]</a>
       </p>
     </section>
 
@@ -307,24 +369,28 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
         <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://www.uiu.ac.bd/" target="_blank">
-            <img src="https://uiu.ac.bd/wp-content/uploads/2023/10/header-logo.png" alt="UIU" class="h-7 object-contain" onerror="this.style.display='none'">
+          <a href="https://uiu.ac.bd/" target="_blank">
+            <img src="uiu.png" alt="UIU" class="h-7 object-contain">
           </a>
           <div>
             <p class="text-sm font-medium text-gray-900 leading-snug">United International University</p>
-            <p class="text-xs text-gray-500 mt-0.5">Research Assistant (Solar-Grid Cooking Device)</p>
+            <p class="text-xs text-gray-500 mt-0.5">Research Assistant (RA)</p>
             <p class="text-xs text-gray-400 mt-0.5">Oct 2024 – Aug 2025</p>
           </div>
           <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/1uZTfu5nCa2yflHPkX5XWAHEWZu4AFcs3/view?usp=drive_link" target="_blank" class="text-accent hover:underline">📄 Project Brief</a>
-            <a href="https://drive.google.com/file/d/135jboxuW9K8TOysFCTkEOppDZABA6ubR/view?usp=sharing" target="_blank" class="text-accent hover:underline">📷 Field Video</a>
-            <a href="https://drive.google.com/file/d/1roeL_V-Q1eG4QfAHl5bZfgGP9Uteaobo/view?usp=sharing" target="_blank" class="text-accent hover:underline">📜 Certificate</a>
+            <a href="https://drive.google.com/file/d/1uZTfu5nCa2yflHPkX5XWAHEWZu4AFcs3/view?usp=drive_link"
+              target="_blank" class="text-accent hover:underline">📄 Project Brief</a>
+            <a href="https://drive.google.com/file/d/135jboxuW9K8TOysFCTkEOppDZABA6ubR/view?usp=sharing" target="_blank"
+              class="text-accent hover:underline">📷 Field Video</a>
+            <a href="https://drive.google.com/file/d/1roeL_V-Q1eG4QfAHl5bZfgGP9Uteaobo/view?usp=sharing" target="_blank"
+              class="text-accent hover:underline">📜 Certificate</a>
           </div>
         </div>
 
         <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
           <a href="https://www.pantechsolutions.net/" target="_blank">
-            <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech" class="h-7 object-contain" onerror="this.style.display='none'">
+            <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech"
+              class="h-7 object-contain" onerror="this.style.display='none'">
           </a>
           <div>
             <p class="text-sm font-medium text-gray-900 leading-snug">Pantech Solutions Pvt Ltd</p>
@@ -332,8 +398,10 @@
             <p class="text-xs text-gray-400 mt-0.5">Mar 2025 – Jun 2025</p>
           </div>
           <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/11DsRAxm1FFhitKg3-tCDUO8XniyzITMQ/view?usp=sharing" target="_blank" class="text-accent hover:underline">📚 Project Lists</a>
-            <a href="https://drive.google.com/drive/folders/1cSdvk_jtTBZ1gwvnLNENH54JiwGty8GT?usp=drive_link" target="_blank" class="text-accent hover:underline">📜 Certificates</a>
+            <a href="https://drive.google.com/file/d/11DsRAxm1FFhitKg3-tCDUO8XniyzITMQ/view?usp=sharing" target="_blank"
+              class="text-accent hover:underline">📚 Project Lists</a>
+            <a href="https://drive.google.com/drive/folders/1cSdvk_jtTBZ1gwvnLNENH54JiwGty8GT?usp=drive_link"
+              target="_blank" class="text-accent hover:underline">📜 Certificates</a>
           </div>
         </div>
 
@@ -343,26 +411,29 @@
           </a>
           <div>
             <p class="text-sm font-medium text-gray-900 leading-snug">UIU Institute for Advanced Research (IAR)</p>
-            <p class="text-xs text-gray-500 mt-0.5">Research Intern (EEG Signal Processing)</p>
+            <p class="text-xs text-gray-500 mt-0.5">Research Intern</p>
             <p class="text-xs text-gray-400 mt-0.5">Oct 2023 – Dec 2023</p>
           </div>
           <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/19e5wDL0rZjZ33wj2HfY-z-VsN8O_1Qev/view?usp=sharing" target="_blank" class="text-accent hover:underline">📝 Draft Writing</a>
-            <a href="https://github.com/Zidan-talukder/BCI-Code" target="_blank" class="text-accent hover:underline">&lt;/&gt; Code</a>
+            <a href="https://drive.google.com/file/d/19e5wDL0rZjZ33wj2HfY-z-VsN8O_1Qev/view?usp=sharing" target="_blank"
+              class="text-accent hover:underline">📝 Draft Writing</a>
+            <a href="https://github.com/Zidan-talukder/BCI-Code" target="_blank"
+              class="text-accent hover:underline">&lt;/&gt; Code</a>
           </div>
         </div>
 
         <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://eee.uiu.ac.bd/" target="_blank">
-            <img src="https://eee.uiu.ac.bd/wp-content/uploads/sites/6/2023/12/cropped-eee.png" alt="EEE UIU" class="h-7 object-contain" onerror="this.style.display='none'">
+          <a href="https://uiu.ac.bd/" target="_blank">
+            <img src="uiu.png" alt="EEE UIU" class="h-7 object-contain">
           </a>
           <div>
             <p class="text-sm font-medium text-gray-900 leading-snug">Dept. of EEE, UIU</p>
-            <p class="text-xs text-gray-500 mt-0.5">Undergraduate Assistant </p>
+            <p class="text-xs text-gray-500 mt-0.5">Undergraduate Assistant (UGA)</p>
             <p class="text-xs text-gray-400 mt-0.5">Jan 2020 – Jun 2020</p>
           </div>
           <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/19Cn31OWv1CI8o7gUCci00V-1pUYDOe0x/view?usp=drive_link" target="_blank" class="text-accent hover:underline">📜 Appointment Letter</a>
+            <a href="https://drive.google.com/file/d/19Cn31OWv1CI8o7gUCci00V-1pUYDOe0x/view?usp=drive_link"
+              target="_blank" class="text-accent hover:underline">📜 Appointment Letter</a>
           </div>
         </div>
 
@@ -378,19 +449,23 @@
       </div>
       <div class="space-y-5">
         <div class="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 md:p-6">
-          <p class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-2">Manuscript · Ready for Submission</p>
+          <p class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-2">Manuscript · Ready for
+            Submission</p>
           <p class="text-sm text-gray-700 leading-relaxed">
             Zaman A., Masud A., Hossain A., <strong>Talukder Z.</strong>, Airin A., Khan Y., et al.
             <em>"Development of a Mars Rover Prototype: Autonomous Navigation and Life Exploration."</em>
             Targeting: IEEE Systems Journals / IEEE Access.
-            <a class="doi-chip" href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link" target="_blank">Draft on request</a>
+            <a class="doi-chip"
+              href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link"
+              target="_blank">Draft on request</a>
           </p>
         </div>
         <div class="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 md:p-6">
           <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Manuscript · In Preparation</p>
           <p class="text-sm text-gray-700 leading-relaxed">
             <strong>Talukder Z.</strong>, Masud A., Orchi A., Muneer S., et al.
-            <em>"Robust, Low-Cost Autonomous Control: An Algorithm for Deployment-Critical CanSats Under Sensor Noise and Partial Faults."</em>
+            <em>"Robust, Low-Cost Autonomous Control: An Algorithm for Deployment-Critical CanSats Under Sensor Noise
+              and Partial Faults."</em>
             Targeting: IEEE Aerospace Conference.
           </p>
         </div>
@@ -398,10 +473,13 @@
           <p class="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-2">Conference Paper · Published</p>
           <p class="text-sm text-gray-700 leading-relaxed">
             Rafiq A., <strong>Talukder Z.</strong>, Hamim A., Firdous J., Ahmed K.I.U.
-            <em>"sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural Network."</em>
+            <em>"sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural
+              Network."</em>
             6th ICEEICT, 2024.
             <a class="doi-chip" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank">DOI ↗</a>
-            <a class="doi-chip" href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=drive_link" target="_blank">PDF</a>
+            <a class="doi-chip"
+              href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=drive_link"
+              target="_blank">PDF</a>
           </p>
         </div>
       </div>
@@ -423,7 +501,8 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">CanSat Competition 2024</p>
                 <p class="text-xs text-gray-500 mt-0.5">11th globally · 3rd Asia · among 80 teams</p>
-                <a href="https://drive.google.com/file/d/1g0JyTbeGZMUJRCj7zabu5Y6a6hkr6S5H/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+                <a href="https://drive.google.com/file/d/1g0JyTbeGZMUJRCj7zabu5Y6a6hkr6S5H/view?usp=sharing"
+                  target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -431,7 +510,8 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">University Rover Challenge 2022</p>
                 <p class="text-xs text-gray-500 mt-0.5">13th globally · 1st Asia · among 99 teams</p>
-                <a href="https://drive.google.com/file/d/1Ls3y3L3X09OZCDPhnfdrE-Rf-HCPKZek/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+                <a href="https://drive.google.com/file/d/1Ls3y3L3X09OZCDPhnfdrE-Rf-HCPKZek/view?usp=sharing"
+                  target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -439,7 +519,8 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">Best Capstone Project Award</p>
                 <p class="text-xs text-gray-500 mt-0.5">Spring 2023 · Dept. of EEE, UIU</p>
-                <a href="https://drive.google.com/file/d/1Cl2Pxlk-JTHDsogdvqNcZfECh1_nvNi6/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+                <a href="https://drive.google.com/file/d/1Cl2Pxlk-JTHDsogdvqNcZfECh1_nvNi6/view?usp=sharing"
+                  target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -454,7 +535,8 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">Merit-based Scholarships</p>
                 <p class="text-xs text-gray-500 mt-0.5">United International University</p>
-                <a href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+                <a href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing"
+                  target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
               </div>
             </div>
           </div>
@@ -462,7 +544,8 @@
         <div>
           <h3 class="text-base font-semibold text-gray-700 mb-4">
             Grants
-            <a href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link" target="_blank" class="text-xs text-accent font-normal ml-1 hover:underline">[UIU Letter]</a>
+            <a href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link"
+              target="_blank" class="text-xs text-accent font-normal ml-1 hover:underline">[UIU Letter]</a>
           </h3>
           <div class="space-y-3">
             <p class="text-xs uppercase tracking-widest text-gray-400 font-medium">Travel Grants</p>
@@ -503,45 +586,78 @@
       <div class="mb-8">
         <h3 class="text-base font-semibold text-gray-700 mb-3">Skills</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Python</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">MATLAB</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">C / C++</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded C</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">OpenCV</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Machine Learning</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Deep Learning</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Control Algorithm</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Power Electronics</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded System</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Signal Processing</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Sensor Fusion</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">TensorFlow</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PyTorch</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Jetson</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Teensy</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">SolidWorks</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">3D Printing</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PCB Design</span>
-          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Soldering</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Python</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">MATLAB</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">C /
+            C++</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded
+            C</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">OpenCV</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Machine
+            Learning</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Deep
+            Learning</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Control
+            Algorithm</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Power
+            Electronics</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded
+            System</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Signal
+            Processing</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Sensor
+            Fusion</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">TensorFlow</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PyTorch</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Jetson</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Teensy</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">SolidWorks</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">3D
+            Printing</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PCB
+            Design</span>
+          <span
+            class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Soldering</span>
         </div>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-base font-semibold text-gray-700 mb-3">Academic Courses <span class="text-xs font-normal text-gray-400">(Robotics / AI Related)</span></h3>
+          <h3 class="text-base font-semibold text-gray-700 mb-3">Academic Courses <span
+              class="text-xs font-normal text-gray-400">(Robotics / AI Related)</span></h3>
           <div class="flex flex-wrap gap-2">
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Calculus 1 & 2</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Linear Algebra & Differential Equations</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Fourier & Laplace Transform</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Vector Analysis</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Probability & Statistics</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Structured Programming (C)</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Microprocessor & Interfacing</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">MATLAB Simulation Lab</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Control Systems</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Digital Signal Processing</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Computer Network</span>
-            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Biomedical Engineering</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Calculus 1 &
+              2</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Linear Algebra
+              & Differential Equations</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Fourier &
+              Laplace Transform</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Vector
+              Analysis</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Probability &
+              Statistics</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Structured
+              Programming (C)</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Microprocessor
+              & Interfacing</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">MATLAB
+              Simulation Lab</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Control
+              Systems</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Digital Signal
+              Processing</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Computer
+              Network</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Biomedical
+              Engineering</span>
           </div>
         </div>
         <div>
@@ -549,18 +665,23 @@
           <ul class="space-y-2">
             <li class="flex gap-2 text-sm text-gray-600">
               <span class="text-gray-300 mt-1">→</span>
-              <span>IEEE Robotics and Automation University (RAS-U) <a href="https://www.ieee-ras.org/ras-university/" target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
+              <span>IEEE Robotics and Automation University (RAS-U) <a href="https://www.ieee-ras.org/ras-university/"
+                  target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
             </li>
             <li class="flex gap-2 text-sm text-gray-600">
               <span class="text-gray-300 mt-1">→</span>
-              <span>QUT Robot Academy: Self-Paced Robotics Education <a href="https://robotacademy.net.au/" target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
+              <span>QUT Robot Academy: Self-Paced Robotics Education <a href="https://robotacademy.net.au/"
+                  target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
             </li>
             <li class="flex gap-2 text-sm text-gray-600">
               <span class="text-gray-300 mt-1">→</span>
               <span>MathWorks MATLAB Onramp:
-                <a href="https://drive.google.com/file/d/1WXXxRKbijWzgZMX38nqoNUnLN5wVjnOe/view?usp=drive_link" target="_blank" class="text-accent hover:underline">ML</a>,
-                <a href="https://drive.google.com/file/d/1AK0790K4ZengolxPQGmBkFqZbTgijweV/view?usp=drive_link" target="_blank" class="text-accent hover:underline">DL</a>,
-                <a href="https://drive.google.com/file/d/1VRA6Lm2u8hLJ4zk7Mq4dNQI7pKisUWW_/view?usp=drive_link" target="_blank" class="text-accent hover:underline">RL</a>
+                <a href="https://drive.google.com/file/d/1WXXxRKbijWzgZMX38nqoNUnLN5wVjnOe/view?usp=drive_link"
+                  target="_blank" class="text-accent hover:underline">ML</a>,
+                <a href="https://drive.google.com/file/d/1AK0790K4ZengolxPQGmBkFqZbTgijweV/view?usp=drive_link"
+                  target="_blank" class="text-accent hover:underline">DL</a>,
+                <a href="https://drive.google.com/file/d/1VRA6Lm2u8hLJ4zk7Mq4dNQI7pKisUWW_/view?usp=drive_link"
+                  target="_blank" class="text-accent hover:underline">RL</a>
               </span>
             </li>
           </ul>
@@ -568,18 +689,200 @@
       </div>
     </section>
 
+    <!-- GALLERY -->
+    <div style="display:none">
+      <div class="border-t border-gray-100"></div>
+      <section id="gallery" class="pt-16 pb-10">
+        <div class="section-line pt-5 mb-10">
+          <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Gallery</h2>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <button onclick="filterGallery('all')" data-filter="all"
+            class="gallery-filter-btn active-filter text-sm font-medium px-4 py-1.5 rounded-full border border-gray-900 bg-gray-900 text-white transition-colors">
+            All
+          </button>
+          <button onclick="filterGallery('cansat')" data-filter="cansat"
+            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
+            CanSat
+          </button>
+          <button onclick="filterGallery('rover')" data-filter="rover"
+            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
+            Mars Rover
+          </button>
+          <button onclick="filterGallery('projects')" data-filter="projects"
+            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
+            Projects
+          </button>
+        </div>
+
+        <!-- Masonry grid -->
+        <div id="galleryGrid" class="columns-2 md:columns-3 gap-3 space-y-3">
+
+          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — ASTRO Probe"
+            data-desc="UIU CanSat 2024 · Virginia, USA · 11th globally, 3rd in Asia">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(0)">
+              <img src="CanSat.png" alt="CanSat ASTRO Probe"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">CanSat — ASTRO Probe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — Exploded View"
+            data-desc="Internal components: heatshield, parachute chamber, circuits, sensors">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(1)">
+              <img src="CanSat_explode.jpg" alt="CanSat Exploded View"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">CanSat — Exploded View</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — Competition Display"
+            data-desc="UIU CanSat team setup at the 2024 competition, Virginia USA">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(2)">
+              <img src="Cansat43.jpeg" alt="CanSat Competition"
+                class="w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">CanSat — Competition Display</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="rover" data-title="Mars Rover — MAVEN"
+            data-desc="UIU Mars Rover at University Rover Challenge 2022 · Utah, USA · 13th globally, 1st in Asia">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(3)">
+              <img src="Rover43.jpeg" alt="Mars Rover MAVEN"
+                class="w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">Mars Rover — MAVEN</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="projects"
+            data-title="Prosthetic Hand — sEMG Control"
+            data-desc="EMG-controlled robotic hand — 97.2% training accuracy, 87.6% real-time on Arduino Nano 33 BLE">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(4)">
+              <img src="prosthetic_hand43.jpg" alt="Prosthetic Hand"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">Prosthetic Hand — sEMG Control</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="projects"
+            data-title="Autonomous Wildlife Monitoring"
+            data-desc="Drone + UGV system for autonomous field monitoring and wildlife intrusion response">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(5)">
+              <img src="Wild43.png" alt="Wildlife Monitoring"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">Autonomous Wildlife Monitoring</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item break-inside-avoid" data-category="projects" data-title="Ground Control Station"
+            data-desc="Custom GCS dashboard for real-time telemetry monitoring during CanSat flight">
+            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(6)">
+              <img src="Monitor.png" alt="Ground Control Station"
+                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
+              <div
+                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
+                <div
+                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <p class="text-white text-xs font-medium leading-tight">Ground Control Station</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox"
+      class="fixed inset-0 z-[100] bg-gray-950/90 backdrop-blur-sm hidden items-center justify-center p-4"
+      onclick="closeLightboxOnBackdrop(event)">
+      <!-- Close -->
+      <button onclick="closeLightbox()"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <!-- Prev -->
+      <button onclick="shiftLightbox(-1)"
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <!-- Next -->
+      <button onclick="shiftLightbox(1)"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      <!-- Image + caption -->
+      <div class="flex flex-col items-center gap-4 max-w-4xl w-full" onclick="event.stopPropagation()">
+        <img id="lbImg" src="" alt="" class="max-h-[75vh] max-w-full rounded-xl object-contain">
+        <div class="text-center">
+          <p id="lbTitle" class="text-white font-medium text-base"></p>
+          <p id="lbDesc" class="text-gray-400 text-sm mt-1"></p>
+          <p id="lbCounter" class="text-gray-600 text-xs mt-2"></p>
+        </div>
+      </div>
+    </div>
+
     <!-- UPDATES -->
     <div class="border-t border-gray-100 mt-4"></div>
     <div class="py-8 space-y-3">
       <div class="flex items-start gap-3 text-sm text-gray-500 bg-gray-50 rounded-xl px-5 py-3 border border-gray-100">
         <span class="text-gray-400 text-xs mt-0.5 font-mono whitespace-nowrap">Sep 25, 2025</span>
         <p>Participated as a judge at the World Robot Olympiad Bangladesh 2025 National round.
-          <a href="https://drive.google.com/file/d/1esNDEEDmLYY73JX3Arg6nA0FXLVAUk3h/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Crest]</a></p>
+          <a href="https://drive.google.com/file/d/1esNDEEDmLYY73JX3Arg6nA0FXLVAUk3h/view?usp=drive_link"
+            target="_blank" class="text-accent hover:underline ml-1">[Crest]</a>
+        </p>
       </div>
       <div class="flex items-start gap-3 text-sm text-gray-500 bg-gray-50 rounded-xl px-5 py-3 border border-gray-100">
         <span class="text-gray-400 text-xs mt-0.5 font-mono whitespace-nowrap">Aug 28, 2025</span>
         <p>Participated as a judge at the World Robot Olympiad Bangladesh 2025 Regional round.
-          <a href="https://drive.google.com/file/d/1vnkrRVFwBQf3I4N_3w1pS8jBu77HJ181/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Crest]</a></p>
+          <a href="https://drive.google.com/file/d/1vnkrRVFwBQf3I4N_3w1pS8jBu77HJ181/view?usp=drive_link"
+            target="_blank" class="text-accent hover:underline ml-1">[Crest]</a>
+        </p>
       </div>
     </div>
 
@@ -587,24 +890,31 @@
 
   <!-- FOOTER -->
   <footer class="border-t border-gray-100 py-8">
-    <div class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
+    <div
+      class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
       <span>© <span id="yr"></span> MD. Zidan Talukder. All Rights Reserved.</span>
       <div class="flex items-center gap-4">
-        <a href="mailto:talukder.zidan@gmail.com" class="hover:text-accent transition-colors">talukder.zidan@gmail.com</a>
-        <a href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a>
+        <a href="mailto:talukder.zidan@gmail.com"
+          class="hover:text-accent transition-colors">talukder.zidan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank"
+          class="hover:text-accent transition-colors">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <!-- CONTACT FAB -->
-  <button id="cfab" class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white text-sm font-medium pl-3.5 pr-4 py-2.5 rounded-full border border-gray-800 hover:bg-gray-700 transition-colors flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
+  <button id="cfab"
+    class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white text-sm font-medium pl-3.5 pr-4 py-2.5 rounded-full border border-gray-800 hover:bg-gray-700 transition-colors flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-80" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
     </svg>
     Contact
   </button>
 
-  <div id="cpop" class="fab-pop fixed bottom-[4.5rem] right-6 z-50 bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-64">
+  <div id="cpop"
+    class="fab-pop fixed bottom-[4.5rem] right-6 z-50 bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-64">
     <!-- Header -->
     <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">
       <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Get in touch</p>
@@ -612,10 +922,13 @@
     <!-- Items -->
     <div class="p-2">
       <a href="mailto:talukder.zidan@gmail.com"
-         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
-        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
+        class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span
+          class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
           </svg>
         </span>
         <div class="min-w-0">
@@ -625,10 +938,13 @@
       </a>
 
       <a href="tel:+8801778783394"
-         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
-        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span
+          class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
           </svg>
         </span>
         <div>
@@ -638,10 +954,12 @@
       </a>
 
       <a href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank"
-         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
-        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+        class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span
+          class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
           </svg>
         </span>
         <div>
@@ -652,9 +970,11 @@
 
       <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl">
         <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="1.8">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
           </svg>
         </span>
         <div>
@@ -669,7 +989,7 @@
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     // Mobile menu
-    document.getElementById('menuBtn').addEventListener('click', function() {
+    document.getElementById('menuBtn').addEventListener('click', function () {
       var m = document.getElementById('mobileMenu');
       m.classList.toggle('hidden');
       m.classList.toggle('flex');
@@ -677,14 +997,14 @@
 
     // FAB
     var fab = document.getElementById('cfab'), pop = document.getElementById('cpop');
-    fab.addEventListener('click', function(e) { e.stopPropagation(); pop.classList.toggle('open'); });
-    document.addEventListener('click', function(e) {
+    fab.addEventListener('click', function (e) { e.stopPropagation(); pop.classList.toggle('open'); });
+    document.addEventListener('click', function (e) {
       if (!e.target.closest('#cpop') && !e.target.closest('#cfab')) pop.classList.remove('open');
     });
 
     // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-      a.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
         var t = document.querySelector(a.getAttribute('href'));
         if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
       });
@@ -693,16 +1013,101 @@
     // Active nav highlight on scroll
     var sections = document.querySelectorAll('section[id]');
     var navLinks = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       var pos = window.scrollY + 80;
-      sections.forEach(function(s) {
+      sections.forEach(function (s) {
         if (pos >= s.offsetTop && pos < s.offsetTop + s.offsetHeight) {
-          navLinks.forEach(function(l) { l.classList.remove('active'); });
+          navLinks.forEach(function (l) { l.classList.remove('active'); });
           var active = document.querySelector('.nav-link[href="#' + s.id + '"]');
           if (active) active.classList.add('active');
         }
       });
     });
+
+    // ── GALLERY ──────────────────────────────────────────────
+    var allItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+    // Build data array from DOM for lightbox
+    var galleryData = allItems.map(function (el) {
+      return {
+        src: el.querySelector('img').src,
+        alt: el.querySelector('img').alt,
+        title: el.dataset.title,
+        desc: el.dataset.desc
+      };
+    });
+
+    // Visible items (changes with filter)
+    var visibleData = galleryData.slice();
+    var currentIndex = 0;
+
+    // Filter
+    function filterGallery(cat) {
+      // Update button styles
+      document.querySelectorAll('.gallery-filter-btn').forEach(function (btn) {
+        if (btn.dataset.filter === cat) {
+          btn.classList.add('active-filter', 'bg-gray-900', 'text-white', 'border-gray-900');
+          btn.classList.remove('text-gray-500', 'border-gray-200');
+        } else {
+          btn.classList.remove('active-filter', 'bg-gray-900', 'text-white', 'border-gray-900');
+          btn.classList.add('text-gray-500', 'border-gray-200');
+        }
+      });
+
+      visibleData = [];
+      allItems.forEach(function (el, i) {
+        var show = cat === 'all' || el.dataset.category === cat;
+        el.style.display = show ? '' : 'none';
+        if (show) visibleData.push(galleryData[i]);
+      });
+    }
+
+    // Lightbox
+    var lb = document.getElementById('lightbox');
+
+    function openLightbox(idx) {
+      // idx refers to allItems index; map to visibleData
+      var item = allItems[idx];
+      var visIdx = visibleData.findIndex(function (d) { return d.src === item.querySelector('img').src; });
+      currentIndex = visIdx >= 0 ? visIdx : 0;
+      renderLightbox();
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderLightbox() {
+      var d = visibleData[currentIndex];
+      document.getElementById('lbImg').src = d.src;
+      document.getElementById('lbImg').alt = d.alt;
+      document.getElementById('lbTitle').textContent = d.title;
+      document.getElementById('lbDesc').textContent = d.desc;
+      document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + visibleData.length;
+    }
+
+    function closeLightbox() {
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target === lb) closeLightbox();
+    }
+
+    function shiftLightbox(dir) {
+      currentIndex = (currentIndex + dir + visibleData.length) % visibleData.length;
+      renderLightbox();
+    }
+
+    // Keyboard nav
+    document.addEventListener('keydown', function (e) {
+      if (lb.classList.contains('hidden')) return;
+      if (e.key === 'ArrowRight') shiftLightbox(1);
+      if (e.key === 'ArrowLeft') shiftLightbox(-1);
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 </body>
+
 </html>
