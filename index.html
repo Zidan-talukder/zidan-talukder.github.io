@@ -5,758 +5,704 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MD. Zidan Talukder — Portfolio</title>
   <meta name="description" content="Portfolio of MD. Zidan Talukder — Robotics, AI, Signal Processing, Power Electronics." />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            serif: ['"DM Serif Display"', 'serif'],
+          },
+          colors: {
+            accent: '#1a56db',
+            'accent-light': '#eff6ff',
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    :root{--bg:#0b0c10;--card:#111218;--text:#e9eef3;--muted:#9aa4b2;--accent:#66e0a3;--cta:#79D3FF;--cta-hover:#A7E7FF;--line:#1c1f2b}
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1200px;margin:0 auto;padding:28px 20px 60px}
-    header{position:sticky;top:0;z-index:1000;background:rgba(11,12,16,.85);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-    .header-inner{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:10px 12px}
-    .topnav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .topnav .qbtn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:#0f1320;box-shadow:0 6px 20px rgba(0,0,0,.12);font-size:.95rem;text-align:center;white-space:normal;line-height:1.2}
-    .topnav .qbtn:hover{text-decoration:none;transform:translateY(-1px)}
-    .topnav .qbtn .stack{display:inline-block;line-height:1.15;text-align:center}
-    .section{margin-top:28px;scroll-margin-top:110px}
-    .sec-title{margin:0 0 12px;font-size:1.6rem;display:flex;align-items:center;gap:10px;padding-left:12px;border-left:4px solid var(--accent);letter-spacing:.2px}
-    .sec-title .ico{font-size:1.25rem}
-    .entry{position:relative;background:#0f1117;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:12px;box-shadow:0 8px 24px rgba(0,0,0,.18);overflow:hidden}
-    #competitions .entry::before,#projects .entry::before{display:none}
-    #competitions .entry,#projects .entry{transition:transform .15s ease,box-shadow .2s ease,border-color .2s ease}
-    #competitions .entry:hover,#projects .entry:hover{border-color:#2a3347;box-shadow:0 16px 36px rgba(0,0,0,.32);transform:translateY(-2px) scale(1.015)}
-    #competitions .entry:nth-of-type(1){background:linear-gradient(145deg, rgba(120,170,255,.10), rgba(0,0,0,0) 55%), #0f1117}
-    #competitions .entry:nth-of-type(2){background:linear-gradient(145deg, rgba(200,150,255,.10), rgba(0,0,0,0) 55%), #0f1117}
-    #projects .entry:nth-of-type(1){background:linear-gradient(145deg, rgba(102,224,163,.10), rgba(0,0,0,0) 55%), #0f1117}
-    #projects .entry:nth-of-type(2){background:linear-gradient(145deg, rgba(255,200,130,.10), rgba(0,0,0,0) 55%), #0f1117}
-    .entry h3{margin:0 0 6px;font-size:1.08rem}
-    .entry .muted{display:block;margin:6px 0 0}
-    .entry-grid{display:grid;gap:14px;align-items:stretch}
-    @media(min-width:860px){.entry-grid{grid-template-columns:7fr 3fr}}
-    .entry-main{min-width:0}
-    .entry-media{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0e1322}
-    .ar-4-3{aspect-ratio:4/3}
-    .ar-5-3{aspect-ratio:5/3}
-    .entry-media::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(102,224,163,.10), inset 0 0 24px rgba(102,224,163,.08)}
-    .entry-media img{width:100%;height:100%;object-fit:cover;display:block;transition:none}
-    .entry-media:hover img{transform:none}
-    @media(min-width:860px){.entry-grid{grid-template-columns:7fr 3fr;align-items:start}.entry-media{margin:-14px -16px -14px 0;border:none;border-left:1px solid var(--line);border-top-right-radius:14px;border-bottom-right-radius:14px}.entry-media img{height:100%}}
-    .grid2{display:grid;gap:16px}
-    @media(min-width:800px){.grid2{grid-template-columns:1fr 1fr}}
-    .xp-grid{display:grid;gap:12px;grid-template-columns:1fr}
-    @media(min-width:900px){.xp-grid{grid-template-columns:repeat(2,1fr)}}
-    .xp-card{position:relative;background:#10131b;border:1px solid #1e2333;border-radius:18px;padding:10px;box-shadow:0 8px 22px rgba(0,0,0,.16);text-align:center;display:flex;flex-direction:column;transition:transform .12s ease,box-shadow .2s ease,border-color .2s ease}
-    .xp-card:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 16px 36px rgba(0,0,0,.32);border-color:#2a3347}
-    .xp-grid .xp-card:nth-child(1){background:linear-gradient(145deg, rgba(102,224,163,.10), rgba(0,0,0,0) 55%), #10131b}
-    .xp-grid .xp-card:nth-child(2){background:linear-gradient(145deg, rgba(120,170,255,.10), rgba(0,0,0,0) 55%), #10131b}
-    .xp-grid .xp-card:nth-child(3){background:linear-gradient(145deg, rgba(255,200,130,.10), rgba(0,0,0,0) 55%), #10131b}
-    .xp-grid .xp-card:nth-child(4){background:linear-gradient(145deg, rgba(200,150,255,.10), rgba(0,0,0,0) 55%), #10131b}
-    .xp-logo{width:116px;height:116px;margin:2px auto 6px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;background:linear-gradient(135deg,#1c2130,#0f1320);font-weight:800;color:#e9eef3;font-size:1.4rem;overflow:hidden;text-decoration:none;transition:transform .14s ease, box-shadow .22s ease, border-color .2s ease;will-change:transform}
-    .xp-logo img{width:100%;height:100%;object-fit:contain;display:block}
-    .xp-logo:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 28px rgba(0,0,0,.34);border-color:#2a3347}
-    .xp-logo:focus-visible{outline:2px solid var(--cta);outline-offset:2px;transform:translateY(-3px) scale(1.02)}
-    .xp-title{margin:2px 0 0;font-size:1.05rem}
-    .xp-sub{margin:1px 0 0;color:var(--muted);font-weight:600;font-size:.9rem}
-    .xp-duration{color:var(--muted);font-size:.85rem;margin:0 0 2px}
-    .xp-desc{color:var(--text);position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.45;max-height:4.5em;transition:max-height .3s ease}
-    .xp-desc-wrap{position:relative;margin-bottom:4px;padding-bottom:0}
-    .xp-desc-wrap::after{display:none}
-    .xp-card.expanded .xp-desc{-webkit-line-clamp:3;display:-webkit-box;overflow:hidden;max-height:4.5em}
-    .xp-links a{display:inline-block;margin-right:8px;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#0e1322;text-decoration:none}
-    .xp-links a:hover{background:#141d33}
-    .xp-partners{position:absolute;top:8px;right:8px;display:flex;gap:10px;align-items:center}
-    .veil-toggle{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:64px;height:52px;color:var(--cta);display:grid;place-items:center;border:1px solid var(--line);background:#0f1320;border-radius:12px;box-shadow:0 8px 18px rgba(0,0,0,.28);cursor:pointer;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
-    .veil-toggle:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.34);background:#141d33;color:var(--cta-hover)}
-    .veil-toggle:focus-visible{outline:2px solid var(--cta);outline-offset:2px}
-    .veil-toggle::before{content:"";position:absolute;left:0;right:0;top:0;height:42%;border-radius:inherit;pointer-events:none;background:linear-gradient(to bottom, rgba(121,211,255,.22), rgba(121,211,255,0) 85%) no-repeat;opacity:.8}
-    .veil-toggle svg{width:100%;height:100%;transition:transform .25s ease}
-    .xp-card.expanded .veil-toggle svg{transform:rotate(180deg)}
-    .veil-toggle svg .chev-line{fill:none;stroke:currentColor;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50 50;stroke-dashoffset:50;opacity:.28;animation:arrowSweep 5s ease-in-out infinite;animation-delay:calc(var(--i) * .6s)}
-    .veil-toggle svg .chev-line:nth-child(1){--i:0}
-    .veil-toggle svg .chev-line:nth-child(2){--i:1}
-    .veil-toggle svg .chev-line:nth-child(3){--i:2}
-    @keyframes arrowSweep{0%{stroke-dashoffset:50;opacity:.25}20%{stroke-dashoffset:0;opacity:1}75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:50;opacity:.25}}
-    .xp-card.expanded .veil-toggle .chev-line{animation:none;stroke-dashoffset:0;opacity:1}
-    @media (prefers-reduced-motion: reduce){.veil-toggle svg .chev-line{animation:none}.contact-fab{animation:none}.contact-fab::after{animation:none}}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);margin:4px 6px 0 0;color:var(--muted);font-size:.9rem}
-    .meta{color:var(--muted);font-size:.92rem}
-    .course-line{margin:6px 0 0;color:var(--text)}
-    .course-line .course{display:inline}
-    .course-line .course:not(:last-child)::after{content:" • ";color:var(--muted);margin:0 6px}
-    details.accordion{padding:0;background:transparent;border:none;margin-top:8px}
-    summary{cursor:pointer;outline:none}
-    summary::marker{content:""}
-    .accordion summary{display:grid;grid-template-columns:1fr auto;align-items:flex-start;gap:12px;padding:14px 16px;background:#0f1320;border:1px solid var(--line);border-radius:12px;transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .12s ease}
-    .accordion summary:hover{background:#162033;border-color:#38445c;box-shadow:0 10px 26px rgba(0,0,0,.28), inset 0 0 0 1px rgba(102,224,163,.08); transform:translateY(-1px)}
-    .accordion summary:active{transform:translateY(0)}
-    .accordion summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-    .accordion .acc-head{display:flex;flex-direction:column;gap:6px;min-width:0}
-    .accordion h3{margin:0;font-size:1.12rem}
-    .accordion .acc-brief{margin:0;color:var(--muted)}
-    .accordion .acc-links{margin:2px 0 0;font-size:.92rem}
-    .accordion .acc-links a{display:inline-block;margin-right:8px;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#0e1322;text-decoration:none}
-    .accordion .acc-links a:hover{background:#141d33}
-    .accordion .chev{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;border:1px solid var(--line);color:var(--accent);transition:transform .2s ease,background .2s ease}
-    .accordion.mini .chev{width:22px;height:22px;display:grid;place-items:center;line-height:1;font-size:13px;border-radius:50%;color:var(--cta)}
-    details[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0;box-shadow:inset 0 -1px 0 var(--line)}
-    details[open] summary .chev{transform:rotate(90deg)}
-    .accordion .acc-body{margin:0;border:1px solid var(--line);border-top:none;border-bottom-left-radius:12px;border-bottom-right-radius:12px;padding:16px 16px 18px;background:#0c111b;box-shadow:0 10px 28px rgba(0,0,0,.18);border-left:3px solid var(--accent);max-height:0;overflow:hidden;opacity:0;transition:max-height .28s cubic-bezier(.22,.61,.36,1),opacity .18s ease}
-    .accordion .acc-body p{margin:0 0 10px}
-    details[open] .acc-body{max-height:900px;opacity:1}
-    footer{margin-top:26px;color:var(--muted);font-size:.92rem}
-    .btn{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#0f1320}
-    html{scroll-behavior:smooth}
-    .contact-fab{position:fixed;right:18px;bottom:18px;z-index:1001;display:inline-flex;align-items:center;gap:12px;padding:14px 20px;border-radius:999px;border:1px solid #3a4762;background:linear-gradient(180deg,#0b1f36,#09162a);color:#f2f6fb;box-shadow:0 16px 40px rgba(0,0,0,.44),0 0 0 2px rgba(102,224,163,.14) inset;cursor:pointer;font-weight:700;letter-spacing:.3px;font-size:1.05rem;transition:transform .12s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;animation:float 3.2s ease-in-out infinite}
-    .contact-fab:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 22px 52px rgba(0,0,0,.5),0 0 0 2px rgba(102,224,163,.22) inset;border-color:#4a597a}
-    .contact-fab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-    .contact-fab::after{content:"";position:absolute;inset:-6px;border-radius:999px;pointer-events:none;box-shadow:0 0 0 0 rgba(102,224,163,.22);opacity:.9;animation:ring 2.6s ease-out infinite}
-    .contact-fab.active{animation:none}
-    .contact-fab.active::after{animation:none;opacity:0}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
-    @keyframes ring{0%{box-shadow:0 0 0 0 rgba(102,224,163,.22)}70%{box-shadow:0 0 0 12px rgba(102,224,163,0)}100%{box-shadow:0 0 0 0 rgba(102,224,163,0)}}
-    .contact-pop{position:fixed;right:18px;bottom:74px;z-index:1002;min-width:280px;max-width:min(92vw,360px);padding:16px;border-radius:14px;background:linear-gradient(180deg,rgba(13,18,30,.96),rgba(8,12,22,.96));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #2f3b55;box-shadow:0 22px 54px rgba(0,0,0,.52),0 0 0 1px rgba(102,224,163,.08) inset;opacity:0;transform:translateY(12px) scale(.96);pointer-events:none;transition:opacity .28s cubic-bezier(.22,.61,.36,1),transform .28s cubic-bezier(.22,.61,.36,1);will-change:transform,opacity;transform-origin:right bottom}
-    .contact-pop.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
-    .contact-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-    .contact-head #contactPopTitle{font-size:1rem;font-weight:500}
-    .contact-close{border:1px solid var(--line);background:#0f1320;color:var(--text);border-radius:8px;padding:4px 8px;cursor:pointer}
-    .contact-body{display:grid;gap:8px}
-    .contact-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#0e1322}
-    .contact-row:hover{background:#141d33;text-decoration:none}
-    .btn.small{padding:8px 12px;border-radius:10px;font-size:.95rem}
-    @media (max-width:520px){.contact-fab{bottom:18px}.contact-pop{right:12px;left:12px;bottom:78px;max-width:none}}
-    .brand-chip{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);background:linear-gradient(180deg,#0e1526,#0b1222);color:var(--text);text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-    .brand-chip:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
-    .brand-chip img{width:20px;height:20px;object-fit:contain;display:block}
-    .brand-chip span{font-size:.86rem;letter-spacing:.2px}
-    .brand-chip.logo-only{display:inline-grid;place-items:center;width:70px;height:70px;padding:0;border-radius:14px;gap:0}
-    .brand-chip.logo-only img{width:65px;height:65px}
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:2000}
-    .modal.open{display:flex}
-    .modal-card{background:#0f1117;border:1px solid var(--line);border-radius:14px;max-width:min(92vw,900px);max-height:min(88vh,900px);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);position:relative}
-    .modal-card img{display:block;max-width:100%;max-height:88vh;width:auto;height:auto}
-    .modal-close{position:absolute;top:8px;right:8px;border:1px solid var(--line);background:#0f1320;color:#var(--text);border-radius:10px;padding:6px 10px;cursor:pointer}
-    .hero{display:grid;gap:18px;align-items:center;margin-top:18px;scroll-margin-top:110px}
-@media(min-width:860px){.hero{grid-template-columns:320px 1fr}}
-.photo{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 28px rgba(0,0,0,.25)}
-.photo img{width:100%;height:auto;display:block}
-.intro h1{font-size:2rem;margin:.2rem 0 .2rem;text-align:left}
-@media(min-width:860px){.intro{display:flex;flex-direction:column;justify-content:center}}
-.veil-toggle{display:none!important}
-  /* Restore previous mini Read more pill style */
-  .accordion.mini summary{display:inline-flex!important;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:linear-gradient(180deg,#0c162a,#081222);border:1px solid #36425a;cursor:pointer;font-weight:600;letter-spacing:.2px;font-size:.92rem;color:var(--text);transition:background .18s ease,box-shadow .22s ease,transform .12s ease,border-color .18s ease}
-  .accordion.mini summary:hover{background:#0f1d34;box-shadow:0 6px 18px rgba(0,0,0,.28),0 0 0 2px rgba(102,224,163,.18);transform:translateY(-1px) scale(1.01);border-color:#425071}
-  .accordion.mini summary .chev{width:22px;height:22px;display:grid;place-items:center;line-height:1;font-size:13px;border-radius:50%;color:var(--cta);border:1px solid var(--line);background:#0f1320;transition:color .18s ease}
-  .accordion.mini summary:hover .chev{color:var(--cta-hover)}
-  .accordion.mini summary .rm-open,.accordion.mini summary .rm-close{color:var(--cta)}
-  .accordion.mini summary:hover .rm-open,.accordion.mini summary:hover .rm-close{color:var(--cta-hover)}
-  .accordion.mini .readmore .rm-open{display:inline}
-  .accordion.mini .readmore .rm-close{display:none}
-  details.accordion.mini[open] .readmore .rm-open{display:none}
-  details.accordion.mini[open] .readmore .rm-close{display:inline}
-.xp-partner-label{display:inline-flex;align-items:center;padding:2px 8px;border:1px solid var(--line);background:#0e1322;border-radius:999px;color:var(--muted);font-size:.82rem;letter-spacing:.25px;line-height:1;white-space:nowrap}
-.intro-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
-.intro-actions .btn{font-weight:600}
-.intro-actions .btn{font-weight:600;display:inline-flex;align-items:center;gap:8px}
-.intro-actions .btn:hover{text-decoration:none}
-.intro-actions .btn .label{text-decoration:none}
-.intro-actions .btn:hover .label{text-decoration:underline;text-underline-offset:2px}
-.intro-actions .btn .icon{display:inline-grid;place-items:center}
-.contact-row .label{text-decoration:none}
-.contact-row:hover .label{text-decoration:underline;text-underline-offset:2px}
-.contact-row .icon{display:inline-grid;place-items:center;width:18px;height:18px}
-.contact-row .icon svg{width:18px;height:18px;display:block}
-.icon.wa svg{width:18px;height:18px;display:block}
-.icon.wa path{fill:#25D366}
-.meta-line{margin:2px 0 0;color:var(--muted);font-size:.95rem}
-.meta-line .label{color:var(--text);font-weight:600}
-.meta-line{margin:2px 0 0;color:var(--muted);font-size:.95rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.meta-line .micro-link{margin-left:auto;color:var(--muted)}
-.meta-line .micro-link:hover{color:var(--cta);text-decoration:underline;text-underline-offset:2px}
-.acc-head .acc-line1{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.acc-head .acc-line1 h3{margin:0}
-.acc-head .acc-line1 .micro-link{color:var(--muted);text-decoration:none}
-.acc-head .acc-line1 .micro-link:hover{color:var(--cta);text-decoration:underline;text-underline-offset:2px}
-.cv-tight{margin:8px 0 0;padding-left:18px;font-size:.95rem}
-.cv-tight li{margin:6px 0}
-.acc-head p.meta-line:last-of-type{margin-bottom:20px !important}
-details.accordion:not([open]) .acc-body{padding-top:0;padding-bottom:0;border:0}
-#competitions .entry .xp-links{margin-top:-5px;margin-bottom:0}
-#competitions .entry{padding:12px 14px}
-@media(min-width:860px){
-    #competitions .entry .entry-grid > details.accordion{grid-column:1 / -1;margin-top:-10px}
-  }
-  #competitions .entry details.accordion .acc-body{max-height:none}
-  .acc-head .acc-line1{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px}
-  .acc-head .acc-line1 .micro-link{color:var(--muted);text-decoration:none}
-  .acc-head .acc-line1 .micro-link:hover{color:var(--cta);text-decoration:underline;text-underline-offset:2px}
-  .sep{color:var(--muted);opacity:.7;margin:0 8px}
-  .chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.05);color:var(--muted);font-size:.9rem;line-height:1;white-space:nowrap}
-  .chip .icon{display:inline-grid;place-items:center;width:16px;height:16px}
-
-  .acc-body .long-desc p{margin:10px 0}
-  .acc-body .long-desc p>strong:first-child{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:2px 8px;
-    margin-right:8px;
-    border-radius:999px;
-    border:1px solid var(--line);
-    background:#0e1322;
-    color:var(--muted);
-    font-weight:700;
-    letter-spacing:.2px;
-  }
-  .acc-body .long-desc p+p{margin-top:14px}
-
-  .acc-body .long-desc p{margin:10px 0}
-  .acc-body .long-desc p>strong:first-child{
-    display:inline-flex;align-items:center;gap:6px;padding:2px 8px;margin-right:8px;
-    border-radius:999px;border:1px solid var(--line);background:#0e1322;color:var(--muted);
-    font-weight:700;letter-spacing:.2px
-  }
-  .acc-body .long-desc p+p{margin-top:14px}
-
-  #projects h3 .chip.status{margin-left:8px}
-  #projects .chip.status.ongoing{
-    border:1px solid #3a4762;
-    background: rgba(121,211,255,.12); /* soft blue */
-    color: var(--cta); /* uses CTA blue, not accent-green */
-    font-weight:700;
-  }
-   #projects .chip.status.capstone{
-    border:1px solid #2a2f3f;
-    background:linear-gradient(180deg, rgba(210,216,230,.12), rgba(210,216,230,.06)); /* soft gray */
-    color:#AEC2D6; /* light gray text for contrast */
-    font-weight:400;
-    box-shadow:0 0 10px rgba(210,216,230,.12), 0 0 0 1px rgba(255,255,255,.04) inset; /* subtle outer + inner glow */
-   }
-  @media(min-width:860px){
-    #projects .entry .entry-grid > details.accordion{grid-column:1 / -1; margin-top:8px}
-  }
-  #projects .entry details.accordion .acc-body{max-height:none}
-    #pubs .chip.doi{
-    display:inline-flex;align-items:center;gap:6px;padding:2px 10px;margin-left:8px;
-    border-radius:999px;border:1px solid rgba(102,224,163,.35);
-    background:rgba(102,224,163,.10);color:var(--accent);font-weight:700;
-    text-decoration:none;white-space:nowrap
-  }
-  #pubs .chip.doi:hover{background:rgba(102,224,163,.14);box-shadow:0 0 0 1px rgba(102,224,163,.12) inset;text-decoration:none}
-
-    /* Honors & Awards list styling (WITH bullets) */
-  #achievements .awards-list{margin:0; padding-left:1.1rem; list-style: disc;}
-  #achievements .awards-list li{margin:8px 0; line-height:1.4}
-  #achievements .awards-list a.accent-link{color:var(--accent); text-decoration:none}
-  #achievements .awards-list a.accent-link:hover{text-decoration: underline}
-
-    /* Grants lists */
-  .grants-list { margin: 0; padding-left: 1.1rem; list-style: disc; }
-  .grants-list li { margin: 6px 0; line-height: 1.4; }
-  .grants-group { margin: 12px 0 6px; }
-  /* Accent link (global, reusable) */
-  .accent-link { color: var(--accent); text-decoration: none; }
-  .accent-link:hover { text-decoration: underline; }
-
-  .rm-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);z-index:9999}
-  .rm-backdrop.open{display:flex}
-  .rm-modal{max-width:min(92vw,950px);width:min(92vw,950px);max-height:88vh;overflow:hidden;display:flex;flex-direction:column;background:var(--bg,#0b1220);color:inherit;border:1px solid var(--line,#2a3550);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
-  .rm-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line,#2a3550)}
-  .rm-modal { border: 2px solid var(--accent); }
-  .rm-head  { border-bottom: 2px solid var(--accent); }
-  .rm-title{margin:0;font-weight:700;font-size:1rem}
-  /*.rm-close{border:0;background:transparent;font-size:30px;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
-   .rm-close:hover{background:rgba(96, 169, 23, 0.158)} */
-  #rmBackdrop .rm-close {
-  width: 32px;
-  height: 32px;
-  border: 3px solid #070707;  /* cyan‑blue circle */
-  color: #48d2d2;              /* cyan‑blue X */
-  border-radius: 999px;        /* perfect circle */
-  display: inline-flex; align-items: center; justify-content: center;
-  background: transparent; font-size:30px; line-height: 1;cursor:pointer;
-}
-/* (optional) subtle hover */
-#rmBackdrop .rm-close:hover { background: rgba(28, 194, 197, 0.139); }
-
-  .rm-body{padding:14px;overflow:auto}
-  body.rm-open{overflow:hidden}
-  /* slightly darker top bar so it stands apart */
-  .rm-head  { background: rgba(155, 155, 155, 0.249); }
-  /* slightly lighter content area for contrast */
-  .rm-body  { background: rgb(0, 0, 0); }
-
-    /* Fade in the backdrop */
-  .rm-backdrop{ opacity:0; transition:opacity .45s ease; }
-  .rm-backdrop.open{ opacity:1; }
-  /* Ease & scale the panel from the button side */
-  .rm-modal{
-    transform-origin: var(--rm-origin, 50% 10%);
-    transform: translateY(6px) scale(.96);
-    opacity: 0;
-    transition: transform 5s cubic-bezier(.2,.75,.25,1), opacity 5s ease;
-  }
-  .rm-backdrop.open .rm-modal{ transform: translateY(0) scale(1); opacity:1; }
-
-  .site-note{font-size:.95rem;margin-top:24px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}
-  .site-note strong{color: #48d2d2}
-  .custom-heading {
-  color: #4bfffc; /* pick your color */
-  } 
-    .courses-list {
-    padding-left: 0.9rem !important;
-    margin-left: 0 !important;
-  }
-
-      .ach-row {
-      display: flex;       /* make it flex container */
-      gap: 10px;           /* optional space between items */
-      flex-wrap: wrap;     /* allows wrapping if screen is small */
-    }
-    .entry.left {
-      flex: 3; /* takes 3 parts out of 5 */
-      padding: 20px; 
-    }
-    .entry.right {
-      flex: 2;       /* fixed 40% width */
-      padding: 20px;
-    }
-
-    /* Ensure the button uses flexbox to align the icon and text container */
-      .cv-link {
-        display: inline-flex;
-        align-items: center; 
-        gap: 8px; /* Adjust the space between the icon and text as needed */
-      }
-
-      /* Stack the title and date vertically */
-      .text-group {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Aligns text to the left */
-        justify-content: center;
-      }
-
-      /* Style the new updated date text */
-      .update-date {
-        font-size: 0.75em; /* Makes the text smaller than the main label */
-        color: #a0aec0; /* A muted gray/blue color that looks good on dark backgrounds */
-        font-weight: 400; /* Keeps it looking less heavy than the main label */
-        margin-top: 2px; /* Adds a tiny bit of breathing room */
-      }
-  
-</style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; }
+    .serif { font-family: 'DM Serif Display', serif; }
+    .nav-link { transition: color 0.15s, border-color 0.15s; }
+    .nav-link:hover { color: #1a56db; }
+    .nav-link.active { color: #1a56db; border-bottom: 2px solid #1a56db; }
+    .entry-card { }
+    .pill { display: inline-block; }
+    .comp-img img { transition: transform 0.3s; }
+    .comp-img:hover img { transform: scale(1.03); }
+    .fab-pop { display: none; }
+    .fab-pop.open { display: block; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    .fade-up { animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.15s; }
+    .fade-up-3 { animation-delay: 0.25s; }
+    .section-line { position: relative; }
+    .section-line::before { content:''; position:absolute; left:0; top:0; height:3px; width:32px; background:#1a56db; border-radius:2px; }
+    .doi-chip { display:inline-flex; align-items:center; background:#eff6ff; color:#1a56db; border:1px solid #bfdbfe; border-radius:4px; padding:1px 8px; font-size:11px; font-weight:500; text-decoration:none; margin-left:6px; }
+    .doi-chip:hover { background:#dbeafe; }
+  </style>
 </head>
-<body>
-  <header>
-    <div class="header-inner">
-      <nav class="topnav" aria-label="Sticky section links">
-        <a class="qbtn" href="#home">👋 About</a>
-        <a class="qbtn" href="#competitions">🏆 <span class="stack">International<br>Competitions</span></a>
-        <a class="qbtn" href="#projects">🧪 <span class="stack">Capstone<br>Project</span></a>
-        <a class="qbtn" href="#experience">💼 <span class="stack">Professional<br>Experience</span></a>
-        <a class="qbtn" href="#pubs">📚 Publications</a>
-        <a class="qbtn" href="#achievements">🥇 Achievements</a>
-        <a class="qbtn" href="#personal">🎓 <span class="stack">Technical<br>Background</span></a>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-5">
+      <nav class="flex items-center justify-between py-3">
+        <span class="serif text-lg text-gray-900 tracking-tight">Zidan Talukder</span>
+        <div class="hidden md:flex items-center gap-1 text-sm font-medium text-gray-500">
+          <a href="#home" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">About</a>
+          <a href="#competitions" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Competitions</a>
+          <a href="#projects" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Projects</a>
+          <a href="#experience" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Experience</a>
+          <a href="#pubs" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Publications</a>
+          <a href="#achievements" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Achievements</a>
+          <a href="#personal" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Background</a>
+        </div>
+        <!-- mobile hamburger placeholder -->
+        <button id="menuBtn" class="md:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </nav>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden md:hidden pb-3 flex-col gap-1 text-sm font-medium text-gray-600">
+        <a href="#home" class="block px-3 py-2 rounded-md hover:bg-gray-50">About</a>
+        <a href="#competitions" class="block px-3 py-2 rounded-md hover:bg-gray-50">Competitions</a>
+        <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-50">Projects</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-50">Experience</a>
+        <a href="#pubs" class="block px-3 py-2 rounded-md hover:bg-gray-50">Publications</a>
+        <a href="#achievements" class="block px-3 py-2 rounded-md hover:bg-gray-50">Achievements</a>
+        <a href="#personal" class="block px-3 py-2 rounded-md hover:bg-gray-50">Background</a>
+      </div>
     </div>
   </header>
-  <div class="wrap">
-    <section class="hero" id="home">
-      <div class="photo" aria-label="Profile photo">
-       <img id="heroPhoto" src="Picture1_X.jpg" alt="MD. Zidan Talukder" decoding="async" width="320" height="420" referrerpolicy="no-referrer" fetchpriority="high" srcset="Picture1_X.jpg 320w, Picture1_X.jpg 480w, Picture1_X.jpg 640w" sizes="(min-width: 860px) 320px, 92vw">
-      
-      </div>
-      <div class="intro">
-        <h1>MD. Zidan Talukder</h1>
-        <div class="intro-text" style="margin-top:10px;color:var(--muted)">
-          <p>Hi, I’m Zidan. I am a robotics engineer passionate about building intelligent, autonomous systems. My hands-on experience spans international competitions—including the University Rover Challenge (Field Robotics) and CanSat Competition (Space Autonomy)—as well as developing embedded ML solutions like an EMG-controlled robotic hand.
-           Supported by an extensive background in AI/ML and electrical systems research, I am currently expanding my expertise in robot learning, specifically exploring its applications in SLAM, path planning, and computer vision for deployed autonomy.
-          </p>
-          <p>Outside research, I enjoy playing cricket, badminton, and table tennis, listening to music, and watching movies. If you’d like to collaborate or just want to connect, feel free to reach out.</p>
-          <div class="intro-actions">
-            <a class="btn small cv-link" href="https://drive.google.com/file/d/1z20UEKb-9ltn-S-wSXEI25ILiuOmzFNY/view?usp=sharing" target="_blank" rel="noopener"><span class="icon">📄</span><span class="text-group"><span class="label">Curriculum Vitae</span><span class="update-date">Updated - April 24, 2026</span></span></a>
-            <a class="btn small cv-link" href="https://drive.google.com/file/d/1VkSFmFV4nJXqQtxbAi1pNF7o52orfUJz/view?usp=drive_link"><span class="icon">🔗</span><span class="label">Official Transcript</span></a>
-            <a class="btn small cv-link" href="https://drive.google.com/file/d/16_YF5sX-jdS2l96_J2gGEecetvfKdnmZ/view?usp=sharing"><span class="icon">🔗</span><span class="label">Recommendation Letters</span></a>
-            <a class="btn small cv-link" href="https://drive.google.com/file/d/1e-BK-LIoHOYalHuxkz_nrfV4NPLvYuk0/view?usp=drive_link" target="_blank" rel="noopener"><span class="icon">🎖️</span><span class="label">IELTS</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="competitions">
-      <h2 class="sec-title"><span class="ico" aria-hidden="true">🏆</span> Prestigious Competitions</h2>
-      <div class="entry">
-        <div class="entry-grid">
-          <div class="entry-main">
-            <div class="acc-head">
-              <div class="acc-line1">
-                <h3>CanSat Competition 2024</h3>
-                <span class="sep">·</span>
-                <span class="chip"><span class="icon" aria-hidden="true">📍</span><span>Virginia, USA</span></span>
-                <span class="sep">·</span>
-                <a class="micro-link" href="https://www.cansatcompetition.com" target="_blank" rel="noopener">Official site ↗</a>
-              </div>
-              <p class="meta-line"><span class="label">Organizers:</span> American Astronautical Society · U.S. Naval Research Laboratory · NASA</p>
-              <p class="meta-line team-line"><span class="label">Team:</span> UIU CanSat — <span class="label">Role:</span> Team Lead — <span class="label">Generation:</span> 1st Gen (UIU ASTRO) — <span class="label">Duration:</span> Jan’24 – July’24 </p>
-            </div>
-            <ul class="cv-tight">
-              <li>Led the development of ASTRO, an atmospheric probe (CanSat). Designed the autonomous control system using state machine logic and multi-sensor fusion (IMU, pressure, ultrasonic, GPS) to automate descent detection, heatshield release, and timed parachute deployment. [C++]</li>
-              <li>Developed physics-based modeling to optimize the sizing and descent stability of the aerobraking heatshield and parachute systems. Guided the design team in creating CAD models and ensured successful 3D printing within weight limits.</li>
-              <li>Managed overall project logistics, wrote technical documents, and delivered judge presentations on our design philosophy in the USA.</li>
-            </ul> 
-          </div>
-          <figure class="entry-media ar-4-3">
-            <img src="CanSat.png" alt="UIU CanSat 2024 payload and launch" loading="lazy" decoding="async" width="1600" height="1200" srcset="CanSat.png 800w, CanSat.png 1200w, CanSat.png 1600w" sizes="(min-width: 860px) 300px, 96vw">
-          </figure>
-          
-          <p class="xp-links">Links: 
-            <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link" target="_blank" rel="noopener">📄 Technical Design Report</a>
-            <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing" target="_blank" rel="noopener">🎥 Flight Video</a>
-            <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank" rel="noopener"> &lt;/&gt;</> Code</a>
-          </p>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="entry-grid">
-            
-          <div class="entry-main">
-            <div class="acc-head">
-                <div class="acc-line1">
-                  <h3>University Rover Challenge 2022</h3>
-                  <span class="sep">·</span>
-                  <span class="chip"><span class="icon" aria-hidden="true">📍</span><span>Utah, USA</span></span>
-                  <span class="sep">·</span>
-                  <a class="micro-link" href="https://urc.marssociety.org" target="_blank" rel="noopener">Official site ↗</a>
-                </div>
-                <p class="meta-line"><span class="label">Organizers:</span> The Mars Society — <span class="label">Team:</span> UIU Mars Rover </p>
-                <p class="meta-line"><span class="label">Role:</span> Science Team Lead — <span class="label">Generation:</span> 1st Gen (MAVEN) — <span class="label">Duration:</span> May’21 – Aug’22</p>
-              </div>
 
-              <ul class="cv-tight">
-                <li>Led the development of a scientific exploration subsystem for MAVEN, a Mars rover prototype. Designed a multi-biomolecule life-detection protocol to analyze soil samples and built a VGG-16-based CNN classification model fusing mVOC sensors and microscopic data to detect life from rock samples into three life-potential tiers (Extant/Extinct/NPL).</li>
-                <li>Developed a teleoperated 3-DoF manipulator integrated with an on-board scientific analysis chamber to classify soil and rock samples. The manipulator collects and deposits soil into the analysis chamber and the chamber performs chemical testing for soil analysis. Furthermore, it captures high-resolution images of rock samples and environmental data to support untouched rock classification.</li>
-              </ul>
-              
-          </div>
-          <figure class="entry-media ar-4-3">
-            <img src="Rover43.jpeg" alt="UIU Mars Rover field testing in Utah" loading="lazy" decoding="async" width="1600" height="1200" srcset="Rover43.jpeg 800w, Rover43.jpeg 1200w, Rover43.jpeg 1600w" sizes="(min-width: 860px) 300px, 96vw">
-          </figure>
-          
-          <p class="xp-links">Links: 
-            <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link" target="_blank" rel="noopener">📄 Science Plan Report</a>
-            <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank" rel="noopener">🎥 Field Video</a>
-          </p>
+  <main class="max-w-5xl mx-auto px-5 pb-24">
+
+    <!-- HERO -->
+    <section id="home" class="grid md:grid-cols-5 gap-12 items-center py-16 md:py-20 fade-up">
+      <div class="md:col-span-2 flex justify-center md:justify-start">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-2xl bg-blue-100 translate-x-3 translate-y-3"></div>
+          <img src="Picture1_X.jpg" alt="MD. Zidan Talukder" class="relative w-56 md:w-full rounded-2xl object-cover shadow-sm border border-gray-100">
+        </div>
+      </div>
+      <div class="md:col-span-3 fade-up fade-up-1">
+        <p class="text-sm font-medium text-blue-600 tracking-widest uppercase mb-3">Robotics Engineer</p>
+        <h1 class="serif text-4xl md:text-5xl leading-tight mb-5 text-gray-900">MD. Zidan<br><em>Talukder</em></h1>
+        <p class="text-gray-500 leading-relaxed mb-3 text-[15px]">
+          I build intelligent, autonomous systems. My hands-on experience spans international competitions — the University Rover Challenge (Field Robotics) and CanSat Competition (Space Autonomy) — and embedded ML solutions like an EMG-controlled robotic hand.
+        </p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-7">
+          Currently expanding expertise in robot learning: SLAM, path planning, and computer vision for deployed autonomy.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://drive.google.com/file/d/1z20UEKb-9ltn-S-wSXEI25ILiuOmzFNY/view?usp=sharing" target="_blank"
+             class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors">
+            <span>📄</span> Curriculum Vitae
+            <span class="opacity-70 text-xs">Apr 2026</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1VkSFmFV4nJXqQtxbAi1pNF7o52orfUJz/view?usp=drive_link" target="_blank"
+             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+            🔗 Transcript
+          </a>
+          <a href="https://drive.google.com/file/d/16_YF5sX-jdS2l96_J2gGEecetvfKdnmZ/view?usp=sharing" target="_blank"
+             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+            🔗 Recommendation Letters
+          </a>
+          <a href="https://drive.google.com/file/d/1e-BK-LIoHOYalHuxkz_nrfV4NPLvYuk0/view?usp=drive_link" target="_blank"
+             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
+            🎖️ IELTS
+          </a>
         </div>
       </div>
     </section>
-    <section class="section" id="projects">
-      <h2 class="sec-title"><span class="icon" aria-hidden="true">🧪</span> Capstone Project/Thesis </h2>
-       
-      <div class="entry">
-        <div class="entry-grid">
-          <div class="entry-main">
-            <div class="acc-head">
-              <h3>sEMG Signal-based Prosthetic Hand Control using Embedded ML (Tiny ML) with Deep Neural Network <span class="chip status capstone">Capstone Project</span></h3>
-              <ul class="cv-tight">
-                <li>Developed the complete sEMG signal preprocessing pipeline (filtering, rectification, smoothing, and windowing) to produce robust inputs for gesture recognition in a bio-robotic hand control project. </li>
-                <li>Implemented a full Edge Impulse TinyML workflow by streaming preprocessed sEMG data and applying FFT for spectral analysis. Trained a Deep Neural Network (DNN) on the resulting spectral data to extract features and classify 4 hand gestures (97.2% accuracy), and deployed the optimized C++ model to an Arduino Nano 33 BLE, achieving 87.6% real-time inference accuracy.</li>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-gray-100"></div>
+
+    <!-- COMPETITIONS -->
+    <section id="competitions" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Prestigious Competitions</h2>
+      </div>
+
+      <div class="space-y-6">
+
+        <!-- CanSat -->
+        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden">
+          <!-- Card header strip -->
+          <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-semibold text-gray-900 leading-tight">CanSat Competition 2024</h3>
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                <span class="flex items-center gap-1"><span>📍</span> Virginia, USA</span>
+                <span class="text-gray-300">|</span>
+                <span>Team Lead &mdash; UIU CanSat</span>
+                <span class="text-gray-300">|</span>
+                <span>Jan &ndash; Jul 2024</span>
+                <span class="text-gray-300">|</span>
+                <a href="https://www.cansatcompetition.com" target="_blank" class="text-accent hover:underline">Official site ↗</a>
+              </div>
+              <p class="text-xs text-gray-400">Organizers: American Astronautical Society &middot; U.S. Naval Research Laboratory &middot; NASA</p>
+            </div>
+            <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+              🏆 11th Global &middot; 3rd Asia
+            </span>
+          </div>
+          <!-- Card body -->
+          <div class="p-6 md:p-8">
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+              <!-- Bullet points — wider column -->
+              <ul class="md:col-span-3 space-y-4">
+                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>Led development of <strong class="text-gray-800 font-medium">ASTRO</strong>, an atmospheric probe. Designed the autonomous control system using state machine logic and multi-sensor fusion (IMU, pressure, ultrasonic, GPS) to automate descent detection, heatshield release, and timed parachute deployment. [C++]</span>
+                </li>
+                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>Developed physics-based modeling to optimize sizing and descent stability of the aerobraking heatshield and parachute systems. Guided CAD modeling and 3D printing within weight limits.</span>
+                </li>
+                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>Managed project logistics, wrote technical documents, and delivered judge presentations in the USA.</span>
+                </li>
               </ul>
-              <div class="xp-links">Links: <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank" rel="noopener">📄 Paper</a> 
-               <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link" target="_blank" rel="noopener">🎥 Demo Video</a>
-              </div>    
+              <!-- Image — narrower column -->
+              <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
+                <img src="CanSat.png" alt="UIU CanSat 2024" class="w-full h-full object-contain p-2">
+              </div>
+            </div>
+            <!-- Links row -->
+            <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
+              <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Technical Design Report</a>
+              <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Flight Video</a>
+              <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">&lt;/&gt; Code</a>
             </div>
           </div>
-          <figure class="entry-media ar-4-3">
-            <img src="prosthetic_hand43.jpg" alt="sEMG prosthetic hand prototype" loading="lazy" decoding="async" width="1600" height="1200" srcset="prosthetic_hand43.jpg 800w, prosthetic_hand43.jpg 1600w, prosthetic_hand43.jpg 1200w" sizes="(min-width: 860px) 300px, 96vw">
-          </figure>
-        
+        </div>
+
+        <!-- URC -->
+        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden">
+          <!-- Card header strip -->
+          <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-semibold text-gray-900 leading-tight">University Rover Challenge 2022</h3>
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                <span class="flex items-center gap-1"><span>📍</span> Utah, USA</span>
+                <span class="text-gray-300">|</span>
+                <span>Science Team Lead &mdash; UIU Mars Rover</span>
+                <span class="text-gray-300">|</span>
+                <span>May 2021 &ndash; Aug 2022</span>
+                <span class="text-gray-300">|</span>
+                <a href="https://urc.marssociety.org" target="_blank" class="text-accent hover:underline">Official site ↗</a>
+              </div>
+              <p class="text-xs text-gray-400">Organizers: The Mars Society</p>
+            </div>
+            <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+              🏆 13th Global &middot; 1st Asia
+            </span>
+          </div>
+          <!-- Card body -->
+          <div class="p-6 md:p-8">
+            <div class="grid md:grid-cols-5 gap-8 items-start">
+              <ul class="md:col-span-3 space-y-4">
+                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>Led scientific exploration subsystem for <strong class="text-gray-800 font-medium">MAVEN</strong>. Designed a multi-biomolecule life-detection protocol and built a VGG-16-based CNN fusing mVOC sensors and microscopic data to classify life potential into three tiers (Extant / Extinct / NPL).</span>
+                </li>
+                <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>Developed a teleoperated 3-DoF manipulator integrated with an on-board scientific analysis chamber for soil and rock classification — chemical testing, high-resolution imaging, and environmental sensing.</span>
+                </li>
+              </ul>
+              <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
+                <img src="Rover43.jpeg" alt="UIU Mars Rover" class="w-full h-full object-contain p-2">
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
+              <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Science Plan Report</a>
+              <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Field Video</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="border-t border-gray-100"></div>
+
+    <!-- CAPSTONE -->
+    <section id="projects" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Capstone Project</h2>
+      </div>
+
+      <div class="rounded-2xl border border-gray-100 overflow-hidden">
+        <!-- Header strip — mirrors competitions cards -->
+        <div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-lg font-semibold text-gray-900 leading-tight">sEMG Signal-based Prosthetic Hand Control using Embedded ML (TinyML) with Deep Neural Network</h3>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+              <span>Dept. of EEE, UIU</span>
+              <span class="text-gray-300">|</span>
+              <span>Spring 2023</span>
+              <span class="text-gray-300">|</span>
+              <span>Arduino Nano 33 BLE &middot; Edge Impulse &middot; C++</span>
+            </div>
+          </div>
+          <span class="self-start sm:self-center flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+            🎖️ Best Capstone Award
+          </span>
+        </div>
+
+        <!-- Card body -->
+        <div class="p-6 md:p-8">
+          <div class="grid md:grid-cols-5 gap-8 items-start">
+            <!-- Bullets -->
+            <ul class="md:col-span-3 space-y-4">
+              <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Developed the complete sEMG signal preprocessing pipeline (filtering, rectification, smoothing, windowing) to produce robust inputs for gesture recognition in a bio-robotic hand control system.</span>
+              </li>
+              <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Implemented a full Edge Impulse TinyML workflow with FFT spectral analysis. Trained a DNN to classify 4 gestures (<strong class="text-gray-800 font-medium">97.2% accuracy</strong>) and deployed the optimized C++ model to Arduino Nano 33 BLE — achieving <strong class="text-gray-800 font-medium">87.6% real-time accuracy</strong>.</span>
+              </li>
+            </ul>
+
+            <!-- Image — object-contain so the full hand is visible -->
+            <div class="md:col-span-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center" style="min-height: 180px;">
+              <img src="prosthetic_hand43.jpg" alt="sEMG Prosthetic Hand" class="w-full h-full object-contain p-2">
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-wrap items-center gap-4 mt-6 pt-5 border-t border-gray-100 text-sm">
+            <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Paper</a>
+            <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Demo Video</a>
+          </div>
         </div>
       </div>
-       <p>
-        <strong class="custom-heading">UNDERGRAD PROJECTS:</strong>
-        [<a class="accent-link" href="https://drive.google.com/file/d/1D_IOPqm68PkJXHAhYom1QU3zNrJrdB5V/view?usp=drive_link" target="_blank" rel="noopener">Link</a>]
+
+      <p class="text-sm text-gray-400 mt-4">
+        <strong class="text-gray-600">Undergraduate Projects:</strong>
+        <a href="https://drive.google.com/file/d/1D_IOPqm68PkJXHAhYom1QU3zNjrdB5V/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Link]</a>
       </p>
     </section>
-    <section class="section" id="experience">
-      <h2 class="sec-title"><span class="ico" aria-hidden="true">💼</span> Professional Experience</h2>
-      <div class="xp-grid">
-        <div class="xp-card">
-          <a class="xp-logo" href="https://www.uiu.ac.bd/" target="_blank" rel="noopener" aria-label="Visit United International University (UIU)"><img src="https://uiu.ac.bd/wp-content/uploads/2023/10/header-logo.png" alt="UIU logo"></a>
-          <h3 class="xp-title">United International University (UIU)</h3>
-          <div class="xp-sub">Research Assistant (RA)</div>
-          <div class="xp-duration">Oct’24 – Aug’25</div>
-          <div class="xp-partners" aria-label="Partners">
-            <span class="xp-partner-label">Partner</span>
-            <a class="brand-chip logo-only" href="https://www.tearfund.org/" target="_blank" rel="noopener" aria-label="Tearfund" title="Tearfund"><img src="https://www.tearfund.org/-/media/metadata/org-common-images/headers/tearfund_logo_blue-01.svg" alt="Tearfund logo"></a>
+
+    <div class="border-t border-gray-100"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Professional Experience</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
+          <a href="https://www.uiu.ac.bd/" target="_blank">
+            <img src="https://uiu.ac.bd/wp-content/uploads/2023/10/header-logo.png" alt="UIU" class="h-7 object-contain" onerror="this.style.display='none'">
+          </a>
+          <div>
+            <p class="text-sm font-medium text-gray-900 leading-snug">United International University</p>
+            <p class="text-xs text-gray-500 mt-0.5">Research Assistant (RA)</p>
+            <p class="text-xs text-gray-400 mt-0.5">Oct 2024 – Aug 2025</p>
           </div>
-          <p class="xp-links">
-            Links: <a href="https://drive.google.com/file/d/1uZTfu5nCa2yflHPkX5XWAHEWZu4AFcs3/view?usp=drive_link" target="_blank" rel="noopener">📄 Project Brief</a> <a href="https://drive.google.com/file/d/135jboxuW9K8TOysFCTkEOppDZABA6ubR/view?usp=sharing" target="_blank" rel="noopener">📷 Field Video</a>
-            <a href="https://drive.google.com/file/d/1roeL_V-Q1eG4QfAHl5bZfgGP9Uteaobo/view?usp=sharing" target="_blank" rel="noopener">📜 Experience Certificate</a> 
-          </p>
-          
+          <div class="flex flex-col gap-1 text-xs mt-auto">
+            <a href="https://drive.google.com/file/d/1uZTfu5nCa2yflHPkX5XWAHEWZu4AFcs3/view?usp=drive_link" target="_blank" class="text-accent hover:underline">📄 Project Brief</a>
+            <a href="https://drive.google.com/file/d/135jboxuW9K8TOysFCTkEOppDZABA6ubR/view?usp=sharing" target="_blank" class="text-accent hover:underline">📷 Field Video</a>
+            <a href="https://drive.google.com/file/d/1roeL_V-Q1eG4QfAHl5bZfgGP9Uteaobo/view?usp=sharing" target="_blank" class="text-accent hover:underline">📜 Certificate</a>
+          </div>
         </div>
-        <div class="xp-card">
-          <a class="xp-logo" href="https://www.pantechsolutions.net/" target="_blank" rel="noopener" aria-label="Visit Pantech Solutions"><img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech Solutions logo"></a>
-          <h3 class="xp-title">Pantech Solutions Pvt Ltd</h3>
-          <div class="xp-sub">Internship Program (AI/ML/DL)</div>
-          <div class="xp-duration">Mar’25 – June’25</div>          
-          <p class="xp-links">Links:
-            <a href="https://drive.google.com/file/d/11DsRAxm1FFhitKg3-tCDUO8XniyzITMQ/view?usp=sharing" target="_blank" rel="noopener">📚 Project Lists</a>
-            <a href="https://drive.google.com/drive/folders/1cSdvk_jtTBZ1gwvnLNENH54JiwGty8GT?usp=drive_link" target="_blank" rel="noopener">📜 Internship Certificates</a>
-            
+
+        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
+          <a href="https://www.pantechsolutions.net/" target="_blank">
+            <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech" class="h-7 object-contain" onerror="this.style.display='none'">
+          </a>
+          <div>
+            <p class="text-sm font-medium text-gray-900 leading-snug">Pantech Solutions Pvt Ltd</p>
+            <p class="text-xs text-gray-500 mt-0.5">Internship (AI / ML / DL)</p>
+            <p class="text-xs text-gray-400 mt-0.5">Mar 2025 – Jun 2025</p>
+          </div>
+          <div class="flex flex-col gap-1 text-xs mt-auto">
+            <a href="https://drive.google.com/file/d/11DsRAxm1FFhitKg3-tCDUO8XniyzITMQ/view?usp=sharing" target="_blank" class="text-accent hover:underline">📚 Project Lists</a>
+            <a href="https://drive.google.com/drive/folders/1cSdvk_jtTBZ1gwvnLNENH54JiwGty8GT?usp=drive_link" target="_blank" class="text-accent hover:underline">📜 Certificates</a>
+          </div>
+        </div>
+
+        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
+          <a href="https://iar.uiu.ac.bd/" target="_blank">
+            <img src="IAR_logo.jpg" alt="IAR" class="h-7 object-contain" onerror="this.style.display='none'">
+          </a>
+          <div>
+            <p class="text-sm font-medium text-gray-900 leading-snug">UIU Institute for Advanced Research (IAR)</p>
+            <p class="text-xs text-gray-500 mt-0.5">Research Intern</p>
+            <p class="text-xs text-gray-400 mt-0.5">Oct 2023 – Dec 2023</p>
+          </div>
+          <div class="flex flex-col gap-1 text-xs mt-auto">
+            <a href="https://drive.google.com/file/d/19e5wDL0rZjZ33wj2HfY-z-VsN8O_1Qev/view?usp=sharing" target="_blank" class="text-accent hover:underline">📝 Draft Writing</a>
+            <a href="https://github.com/Zidan-talukder/BCI-Code" target="_blank" class="text-accent hover:underline">&lt;/&gt; Code</a>
+          </div>
+        </div>
+
+        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
+          <a href="https://eee.uiu.ac.bd/" target="_blank">
+            <img src="https://eee.uiu.ac.bd/wp-content/uploads/sites/6/2023/12/cropped-eee.png" alt="EEE UIU" class="h-7 object-contain" onerror="this.style.display='none'">
+          </a>
+          <div>
+            <p class="text-sm font-medium text-gray-900 leading-snug">Dept. of EEE, UIU</p>
+            <p class="text-xs text-gray-500 mt-0.5">Undergraduate Assistant (UGA)</p>
+            <p class="text-xs text-gray-400 mt-0.5">Jan 2020 – Jun 2020</p>
+          </div>
+          <div class="flex flex-col gap-1 text-xs mt-auto">
+            <a href="https://drive.google.com/file/d/19Cn31OWv1CI8o7gUCci00V-1pUYDOe0x/view?usp=drive_link" target="_blank" class="text-accent hover:underline">📜 Appointment Letter</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="border-t border-gray-100"></div>
+
+    <!-- PUBLICATIONS -->
+    <section id="pubs" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Publications</h2>
+      </div>
+      <div class="space-y-5">
+        <div class="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 md:p-6">
+          <p class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-2">Manuscript · Ready for Submission</p>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Zaman A., Masud A., Hossain A., <strong>Talukder Z.</strong>, Airin A., Khan Y., et al.
+            <em>"Development of a Mars Rover Prototype: Autonomous Navigation and Life Exploration."</em>
+            Targeting: IEEE Systems Journals / IEEE Access.
+            <a class="doi-chip" href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link" target="_blank">Draft on request</a>
           </p>
         </div>
-        <div class="xp-card">
-          <a class="xp-logo" href="https://iar.uiu.ac.bd/" target="_blank" rel="noopener" aria-label="Visit Institute for Advanced Research (IAR)"><img src="IAR_logo.jpg" alt="IAR logo"></a>
-          <h3 class="xp-title">UIU Institute for Advanced Research (IAR)</h3>
-          <div class="xp-sub">Research Intern</div>
-          <div class="xp-duration">Oct’23 – Dec’23</div>
-          <p class="xp-links">Links:<a href="https://drive.google.com/file/d/19e5wDL0rZjZ33wj2HfY-z-VsN8O_1Qev/view?usp=sharing" target="_blank" rel="noopener">📝 Draft Writing</a> 
-            <a href="https://github.com/Zidan-talukder/BCI-Code" target="_blank" rel="noopener"> &lt;/&gt;</> Code</a>  
+        <div class="rounded-2xl border border-gray-100 bg-gray-50/50 p-5 md:p-6">
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Manuscript · In Preparation</p>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            <strong>Talukder Z.</strong>, Masud A., Orchi A., Muneer S., et al.
+            <em>"Robust, Low-Cost Autonomous Control: An Algorithm for Deployment-Critical CanSats Under Sensor Noise and Partial Faults."</em>
+            Targeting: IEEE Aerospace Conference.
           </p>
         </div>
-        <div class="xp-card">
-          <a class="xp-logo" href="https://eee.uiu.ac.bd/" target="_blank" rel="noopener" aria-label="Visit Department of EEE, UIU"><img src="https://eee.uiu.ac.bd/wp-content/uploads/sites/6/2023/12/cropped-eee.png" alt="UIU EEE logo"></a>
-          <h3 class="xp-title">Dept. of EEE, UIU</h3>
-          <div class="xp-sub">Undergraduate Assistant (UGA) </div>
-          <div class="xp-duration">Jan’20 – June’20</div>
-          <p class="xp-links">Links: <a href="https://drive.google.com/file/d/19Cn31OWv1CI8o7gUCci00V-1pUYDOe0x/view?usp=drive_link" target="_blank" rel="noopener">📜 Appointment Letter</a></p>
+        <div class="rounded-2xl border border-blue-50 bg-blue-50/40 p-5 md:p-6">
+          <p class="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-2">Conference Paper · Published</p>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Rafiq A., <strong>Talukder Z.</strong>, Hamim A., Firdous J., Ahmed K.I.U.
+            <em>"sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural Network."</em>
+            6th ICEEICT, 2024.
+            <a class="doi-chip" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank">DOI ↗</a>
+            <a class="doi-chip" href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=drive_link" target="_blank">PDF</a>
+          </p>
         </div>
       </div>
     </section>
-    <section class="section" id="pubs">
-      <h2 class="sec-title"><span class="ico" aria-hidden="true">📚</span> Publications</h2>
-      <div class="entry">
-        <h3>Manuscripts</h3>
-          <ul class="courses-list">
-            <li><strong>[Ready for Submission]</strong> Zaman A., Masud A., Hossain A., <Strong>Talukder Z.,</Strong> Airin A., Khan Y., et al. <em>“Development of a Mars Rover Prototype: Autonomous Navigation and Life Exploration,” </em>
-               Targeting: IEEE Systems Journals / IEEE Access. <a class="chip doi" href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link" target="_blank" rel="noopener">Draft available on request</a>
-            </li>
-            <p>
-              <li><strong>[In Preparation] Talukder Z., </strong>Masud A., Orchi A., Muneer S., et al. <em>"Robust, Low-Cost Autonomous Control: An Algorithm for Deployment-Critical CanSats Under Sensor Noise and Partial Faults," </em>
-                Targeting: IEEE Aerospace Conference.
-              </li>
-            </p>
-          </ul>
+
+    <div class="border-t border-gray-100"></div>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Achievements</h2>
       </div>
-      <div class="entry">
-        <h3>Conference</h3>
-          <ul class="courses-list">
-            <li>Rafiq A., <strong>Talukder Z.</strong>, Hamim A., Firdous j., Ahmed K.I.U., <em>“sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural Network,” </em> 
-                6th International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT),2024. <a class="chip doi" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank" rel="noopener"> DOI: 10.1109/ICEEICT62016.2024.10534475</a>
-            <a class="chip doi" href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=drive_link" target="_blank" rel="noopener"> PDF </a></li>
-          </ul>
-      </div>
-    </section>
-    <section class="section" id="achievements">
-      <h2 class="sec-title"><span class="ico" aria-hidden="true">🏅</span> Achievements</h2>
-      <div class="ach-row">
-        <div class="entry left">
-          <h3>Honors &amp; Awards</h3>
-            <ul class="awards-list">
-              <li>CanSat Competition 2024 —  Among 80 teams 11th globally (3rd Asia). [<a class="accent-link" href="https://drive.google.com/file/d/1g0JyTbeGZMUJRCj7zabu5Y6a6hkr6S5H/view?usp=sharing" target="_blank" rel="noopener">Certificates</a>]</li>
-              <li>University Rover Challenge 2022 —  Among 99 teams 13th globally (1st Asia). [<a class="accent-link" href="https://drive.google.com/file/d/1Ls3y3L3X09OZCDPhnfdrE-Rf-HCPKZek/view?usp=sharing" target="_blank" rel="noopener">Certificates</a>]</li>
-              <li>Best Capstone Project Award — Spring 2023, Dept. of EEE, UIU. [<a class="accent-link" href="https://drive.google.com/file/d/1Cl2Pxlk-JTHDsogdvqNcZfECh1_nvNi6/view?usp=sharing" target="_blank" rel="noopener">Certificates</a>]</li>
-              <li>Innovation Contest (ICEEICT 2024) — 2nd Runner-Up among 101 projects.</li>
-              <li>Merit-based Scholarships — United International University. [<a class="accent-link" href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing" target="_blank" rel="noopener">Certificate</a>]</li>
-            </ul>
-        </div>
-        <div class="entry right">
-          <h3>Grants [<a class="accent-link" href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link" target="_blank" rel="noopener">UIU Letter</a>]</h3>
-            <p class="grants-group"><strong>1. Travel Grants:</strong> </p>
-            <ul class="grants-list">
-              <li>CanSat 2024 (Virginia, USA) — 5000$</li>
-              <li>URC 2022 (Utah, USA) — 5000$</li>
-            </ul>
-            <p class="grants-group"><strong>2. Project Grants:</strong></p>
-              <ul class="grants-list">
-                <li>UIU Mars Rover — 23000$</li>
-                <li>UIU CanSat — 8000$</li>
-                <li>Prosthetic Hand — 2000$</li>
-              </ul>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="personal">
-      <h2 class="sec-title"><span class="ico" aria-hidden="true">🎓</span> Technical Background</h2>
-        <div class="entry">
-          <h3>Academic Courses</h3>
-          <p class="meta">Selected (Robotics/AI Related) [<a class="accent-link" href="https://eee.uiu.ac.bd/wp-content/uploads/sites/6/2024/02/Curriculum_BSc_EEE_183_Onwards-Amended-on-211.pdf" target="_blank" rel="noopener">Course Contents</a>]</p>
-          <p class="course-line"><span class="course">Calculus 1</span><span class="course">Calculus 2</span><span class="course">Linear algebra and differential equations</span><span class="course">Complex variables, Fourier and laplace transform</span>
-           <span class="course">Coordinate geometry and vector analysis</span><span class="course">Probability, Statistics & Random Analysis</span><span class="course">Structured Programming Language (C)</span>
-           <span class="course">Microprocessor & Interfacing (Embedded C)</span> <span class="course">Simulation Lab (MATLAB)</span> <span class="course">Control Systems</span> 
-           <span class="course">Digital Signal Processing</span> <span class="course">Computer Network</span>
-           <span class="course">Physics 1</span> <span class="course">Physics 2</span><span class="course">Biomedical Engineering</span>
-          </p>
-          <details class="accordion mini">
-            <summary class="readmore"data-rm-title="Selected Academic Courses (Energy/Electronics/Communication)"><span class="rm-open">Read more</span><span class="rm-close">Read less</span> <span class="chev">▶</span></summary>
-            <div class="acc-body">
-              <p class="course-line"> <span class="course"><span class="course">Mobile Cellular Communication</span><span class="course"> Digital Communication</span>
-                <span class="course">Communication theory</span><span class="course">Numerical Techniques</span>
-                <span class="course">Power Electronics </span><span class="course">Electrical Machines</span><span class="course">Digital Electronics</span><span class="course">Analog Electronics</span><span class="course">Renewable Energy</span>
-              </p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-base font-semibold text-gray-700 mb-4">Honors & Awards</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-lg mt-0.5">🏆</span>
+              <div>
+                <p class="text-sm font-medium text-gray-900">CanSat Competition 2024</p>
+                <p class="text-xs text-gray-500 mt-0.5">11th globally · 3rd Asia · among 80 teams</p>
+                <a href="https://drive.google.com/file/d/1g0JyTbeGZMUJRCj7zabu5Y6a6hkr6S5H/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+              </div>
             </div>
-          </details>
-        </div>      
-      <div class="grid2">
-        <div class="entry">
-            <h3>Online Learning &amp; Training</h3>
-              <ul class="courses-list">
-                <li>IEEE Robotics and Automation University (RAS-U) [<a class="accent-link" href="https://www.ieee-ras.org/ras-university/" target="_blank" rel="noopener">Link</a>]</li>
-                <li>QUT Robot Academy : Self-Paced Robotics Education. [<a class="accent-link" href="https://robotacademy.net.au/" target="_blank" rel="noopener">Link</a>]</li>
-                <li>MathWorks MATLAB Onramp Courses: <a class="accent-link" href="https://drive.google.com/file/d/1WXXxRKbijWzgZMX38nqoNUnLN5wVjnOe/view?usp=drive_link" target="_blank" rel="noopener">Machine Learning</a>, 
-                  <a class="accent-link" href="https://drive.google.com/file/d/1AK0790K4ZengolxPQGmBkFqZbTgijweV/view?usp=drive_link" target="_blank" rel="noopener">Deep Learning</a>, 
-                  <a class="accent-link" href="https://drive.google.com/file/d/1VRA6Lm2u8hLJ4zk7Mq4dNQI7pKisUWW_/view?usp=drive_link" target="_blank" rel="noopener">Reinforcement Learning</a>.</li>
-              </ul>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-lg mt-0.5">🏆</span>
+              <div>
+                <p class="text-sm font-medium text-gray-900">University Rover Challenge 2022</p>
+                <p class="text-xs text-gray-500 mt-0.5">13th globally · 1st Asia · among 99 teams</p>
+                <a href="https://drive.google.com/file/d/1Ls3y3L3X09OZCDPhnfdrE-Rf-HCPKZek/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-lg mt-0.5">🎖️</span>
+              <div>
+                <p class="text-sm font-medium text-gray-900">Best Capstone Project Award</p>
+                <p class="text-xs text-gray-500 mt-0.5">Spring 2023 · Dept. of EEE, UIU</p>
+                <a href="https://drive.google.com/file/d/1Cl2Pxlk-JTHDsogdvqNcZfECh1_nvNi6/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-lg mt-0.5">🥉</span>
+              <div>
+                <p class="text-sm font-medium text-gray-900">Innovation Contest — ICEEICT 2024</p>
+                <p class="text-xs text-gray-500 mt-0.5">2nd Runner-Up among 101 projects</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-lg mt-0.5">🎓</span>
+              <div>
+                <p class="text-sm font-medium text-gray-900">Merit-based Scholarships</p>
+                <p class="text-xs text-gray-500 mt-0.5">United International University</p>
+                <a href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing" target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="entry">
-          <h3>Skills</h3>
-          <p>
-            <span class="pill">Python</span>
-            <span class="pill">MATLAB</span>
-            <span class="pill">C/C++</span>
-            <span class="pill">Embedded C</span>
-            <span class="pill">OpenCV</span>
-            <span class="pill">Machine Learning</span>
-            <span class="pill">Deep Learning</span>
-            <span class="pill">Control Algorithm</span>
-            <span class="pill">Power Electronics</span>
-            <span class="pill">Embedded System</span>
-            <span class="pill">Signal Processing</span>
-            <span class="pill">Sensor Fusion</span>
-            <span class="pill">TensorFlow</span>
-            <span class="pill">PyTorch</span>
-            <span class="pill">Jetson</span>
-            <span class="pill">teensy</span>
-            <span class="pill">SolidWorks</span>
-            <span class="pill">3D Printing</span>
-            <span class="pill">PCB Design</span>
-            <span class="pill">Soldering</span>
-          </p>
+        <div>
+          <h3 class="text-base font-semibold text-gray-700 mb-4">
+            Grants
+            <a href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link" target="_blank" class="text-xs text-accent font-normal ml-1 hover:underline">[UIU Letter]</a>
+          </h3>
+          <div class="space-y-3">
+            <p class="text-xs uppercase tracking-widest text-gray-400 font-medium">Travel Grants</p>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-sm text-gray-700">CanSat 2024 — Virginia, USA</span>
+              <span class="text-sm font-semibold text-gray-900">$5,000</span>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-sm text-gray-700">URC 2022 — Utah, USA</span>
+              <span class="text-sm font-semibold text-gray-900">$5,000</span>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-gray-400 font-medium pt-2">Project Grants</p>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-sm text-gray-700">UIU Mars Rover</span>
+              <span class="text-sm font-semibold text-gray-900">$23,000</span>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-sm text-gray-700">UIU CanSat</span>
+              <span class="text-sm font-semibold text-gray-900">$8,000</span>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100">
+              <span class="text-sm text-gray-700">Prosthetic Hand</span>
+              <span class="text-sm font-semibold text-gray-900">$2,000</span>
+            </div>
+          </div>
         </div>
-        
       </div>
     </section>
-    <section class="site-note" aria-label="Recent update">
-      <p><strong>Update — September 25, 2025:</strong> Participated as a judge at the World Robot Olympiad Bangladesh (<a class="accent-link" href="https://wrobd.org/" target="_blank" rel="noopener">WRObd</a>) 2025 National round. [<a class="accent-link" href="https://drive.google.com/file/d/1esNDEEDmLYY73JX3Arg6nA0FXLVAUk3h/view?usp=drive_link" target="_blank" rel="noopener">Crest</a>]</p>
-      <p><strong>Update — August 28, 2025:</strong> Participated as a judge at the World Robot Olympiad Bangladesh 2025 Regional round. [<a class="accent-link" href="https://drive.google.com/file/d/1vnkrRVFwBQf3I4N_3w1pS8jBu77HJ181/view?usp=drive_link" target="_blank" rel="noopener">Crest</a>]</p>
+
+    <div class="border-t border-gray-100"></div>
+
+    <!-- TECHNICAL BACKGROUND -->
+    <section id="personal" class="pt-16 pb-10">
+      <div class="section-line pt-5 mb-10">
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Technical Background</h2>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-base font-semibold text-gray-700 mb-3">Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Python</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">MATLAB</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">C / C++</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded C</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">OpenCV</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Machine Learning</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Deep Learning</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Control Algorithm</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Power Electronics</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Embedded System</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Signal Processing</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Sensor Fusion</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">TensorFlow</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PyTorch</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Jetson</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Teensy</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">SolidWorks</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">3D Printing</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">PCB Design</span>
+          <span class="pill text-sm bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-700">Soldering</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-base font-semibold text-gray-700 mb-3">Academic Courses <span class="text-xs font-normal text-gray-400">(Robotics / AI Related)</span></h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Calculus 1 & 2</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Linear Algebra & Differential Equations</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Fourier & Laplace Transform</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Vector Analysis</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Probability & Statistics</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Structured Programming (C)</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Microprocessor & Interfacing</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">MATLAB Simulation Lab</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Control Systems</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Digital Signal Processing</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Computer Network</span>
+            <span class="text-xs bg-blue-50 text-blue-700 border border-blue-100 rounded-md px-2.5 py-1">Biomedical Engineering</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-gray-700 mb-3">Online Learning & Training</h3>
+          <ul class="space-y-2">
+            <li class="flex gap-2 text-sm text-gray-600">
+              <span class="text-gray-300 mt-1">→</span>
+              <span>IEEE Robotics and Automation University (RAS-U) <a href="https://www.ieee-ras.org/ras-university/" target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
+            </li>
+            <li class="flex gap-2 text-sm text-gray-600">
+              <span class="text-gray-300 mt-1">→</span>
+              <span>QUT Robot Academy: Self-Paced Robotics Education <a href="https://robotacademy.net.au/" target="_blank" class="text-accent hover:underline text-xs">[Link]</a></span>
+            </li>
+            <li class="flex gap-2 text-sm text-gray-600">
+              <span class="text-gray-300 mt-1">→</span>
+              <span>MathWorks MATLAB Onramp:
+                <a href="https://drive.google.com/file/d/1WXXxRKbijWzgZMX38nqoNUnLN5wVjnOe/view?usp=drive_link" target="_blank" class="text-accent hover:underline">ML</a>,
+                <a href="https://drive.google.com/file/d/1AK0790K4ZengolxPQGmBkFqZbTgijweV/view?usp=drive_link" target="_blank" class="text-accent hover:underline">DL</a>,
+                <a href="https://drive.google.com/file/d/1VRA6Lm2u8hLJ4zk7Mq4dNQI7pKisUWW_/view?usp=drive_link" target="_blank" class="text-accent hover:underline">RL</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <footer>© <span id="y"></span> MD. Zidan Talukder. All Rights Reserved.</footer>
-  </div>
-  <button id="contactFab" class="contact-fab" aria-haspopup="dialog" aria-expanded="false" aria-controls="contactPop">📬 Contact</button>
-  <div id="contactPop" class="contact-pop" role="dialog" aria-modal="true" aria-labelledby="contactPopTitle">
-    <div class="contact-head">
-      <span id="contactPopTitle">Contact</span>
-      <button type="button" class="contact-close" aria-label="Close">✕</button>
+    <!-- UPDATES -->
+    <div class="border-t border-gray-100 mt-4"></div>
+    <div class="py-8 space-y-3">
+      <div class="flex items-start gap-3 text-sm text-gray-500 bg-gray-50 rounded-xl px-5 py-3 border border-gray-100">
+        <span class="text-gray-400 text-xs mt-0.5 font-mono whitespace-nowrap">Sep 25, 2025</span>
+        <p>Participated as a judge at the World Robot Olympiad Bangladesh 2025 National round.
+          <a href="https://drive.google.com/file/d/1esNDEEDmLYY73JX3Arg6nA0FXLVAUk3h/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Crest]</a></p>
+      </div>
+      <div class="flex items-start gap-3 text-sm text-gray-500 bg-gray-50 rounded-xl px-5 py-3 border border-gray-100">
+        <span class="text-gray-400 text-xs mt-0.5 font-mono whitespace-nowrap">Aug 28, 2025</span>
+        <p>Participated as a judge at the World Robot Olympiad Bangladesh 2025 Regional round.
+          <a href="https://drive.google.com/file/d/1vnkrRVFwBQf3I4N_3w1pS8jBu77HJ181/view?usp=drive_link" target="_blank" class="text-accent hover:underline ml-1">[Crest]</a></p>
+      </div>
     </div>
-    <div class="contact-body">
-      <a class="contact-row" href="mailto:talukder.zidan@gmail.com"><span class="icon">📧</span><span class="label">talukder.zidan@gmail.com</span></a>
-      <a class="contact-row" href="tel:+8801778783394"><span class="icon wa" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16.001 3.2c-7.05 0-12.8 5.75-12.8 12.8 0 2.257.59 4.363 1.61 6.2L3.2 28.8l6.8-1.78c1.77.96 3.792 1.51 5.999 1.51 7.05 0 12.8-5.75 12.8-12.8s-5.75-12.8-12.798-12.8zm7.54 18.58c-.33.93-1.92 1.77-2.65 1.87-.68.1-1.57.14-2.53-.16-2.95-.95-6.8-4.02-7.85-6.94-.06-.16-1.5-3.62 0-5.43.81-1.03 1.83-1.06 2.46-1.01.23.02.51.02.78.6.33.71 1.14 2.48 1.24 2.66.1.18.16.4.03.63-.12.26-.18.42-.35.65-.16.23-.37.52-.53.7-.17.18-.35.38-.15.74.2.36.89 1.46 1.9 2.37 1.31 1.16 2.41 1.52 2.77 1.7.36.18.57.16.79-.09.22-.25.9-1.05 1.14-1.41.24-.36.47-.31.79-.18.33.12 2.06.97 2.41 1.14.35.17.58.26.67.41.09.16.09.91-.24 1.83z"/></svg></span><span class="label">+880 1778 783 394</span></a>
-      <a class="contact-row" href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank" rel="noopener"><span class="icon" aria-hidden="true">in</span><span class="label">LinkedIn</span></a>
-      <div class="contact-row"><span class="icon">📍</span><span class="label">Dhaka, Bangladesh</span></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-100 py-8">
+    <div class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
+      <span>© <span id="yr"></span> MD. Zidan Talukder. All Rights Reserved.</span>
+      <div class="flex items-center gap-4">
+        <a href="mailto:talukder.zidan@gmail.com" class="hover:text-accent transition-colors">talukder.zidan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT FAB -->
+  <button id="cfab" class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white text-sm font-medium pl-3.5 pr-4 py-2.5 rounded-full border border-gray-800 hover:bg-gray-700 transition-colors flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
+    </svg>
+    Contact
+  </button>
+
+  <div id="cpop" class="fab-pop fixed bottom-[4.5rem] right-6 z-50 bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden w-64">
+    <!-- Header -->
+    <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">
+      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Get in touch</p>
+    </div>
+    <!-- Items -->
+    <div class="p-2">
+      <a href="mailto:talukder.zidan@gmail.com"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75" />
+          </svg>
+        </span>
+        <div class="min-w-0">
+          <p class="text-xs text-gray-400 leading-none mb-0.5">Email</p>
+          <p class="text-sm text-gray-700 font-medium truncate">talukder.zidan@gmail.com</p>
+        </div>
+      </a>
+
+      <a href="tel:+8801778783394"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+        </span>
+        <div>
+          <p class="text-xs text-gray-400 leading-none mb-0.5">Phone / WhatsApp</p>
+          <p class="text-sm text-gray-700 font-medium">+880 1778 783 394</p>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/md-zidan-talukder-1428581b4" target="_blank"
+         class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors group">
+        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </span>
+        <div>
+          <p class="text-xs text-gray-400 leading-none mb-0.5">LinkedIn</p>
+          <p class="text-sm text-gray-700 font-medium">md-zidan-talukder</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl">
+        <span class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+          </svg>
+        </span>
+        <div>
+          <p class="text-xs text-gray-400 leading-none mb-0.5">Location</p>
+          <p class="text-sm text-gray-500 font-medium">Dhaka, Bangladesh</p>
+        </div>
+      </div>
     </div>
   </div>
+
   <script>
-(function(){var y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();})();
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var href=a.getAttribute('href')||'';if(href.startsWith('#')&&href.length>1){var target=document.querySelector(href);if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});if(typeof target.focus==='function'){target.setAttribute('tabindex','-1');target.focus({preventScroll:true});}}}},{passive:false});
-
-(function(){var fab=document.getElementById('contactFab');var pop=document.getElementById('contactPop');if(!fab||!pop)return;function openPop(){pop.classList.add('open');fab.setAttribute('aria-expanded','true');fab.classList.add('active');}function closePop(){pop.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.classList.remove('active');}fab.addEventListener('click',function(e){e.stopPropagation();var isOpen=pop.classList.contains('open');isOpen?closePop():openPop();});pop.addEventListener('click',function(e){if(e.target.closest('.contact-close')){closePop();}});document.addEventListener('click',function(e){if(!pop.classList.contains('open'))return;if(!e.target.closest('#contactPop')&&!e.target.closest('#contactFab'))closePop();});document.addEventListener('keydown',function(e){if(e.key==='Escape')closePop();});})();
-
-(function(){
-  var accordions = document.querySelectorAll('details.accordion');
-  if(!accordions.length) return;
-  accordions.forEach(function(d){
-    d.addEventListener('toggle', function(){
-      if(!d.open) return;
-      accordions.forEach(function(o){ if(o!==d && o.open) o.open = false; });
-    });
-  });
-})();
-</script>
-
-<div id="rmBackdrop" class="rm-backdrop" aria-hidden="true">
-  <div class="rm-modal" role="dialog" aria-modal="true" aria-labelledby="rmTitle">
-    <div class="rm-head">
-      <h4 id="rmTitle" class="rm-title">Details</h4>
-      <button class="rm-close" type="button" aria-label="Close (Esc)">×</button>
-    </div>
-    <div id="rmContent" class="rm-body"></div>
-  </div>
-</div>
-<!-- C) JS (intercept current Read more, show its .acc-body in the popup) -->
-<script>
-(function(){
-  var backdrop = document.getElementById('rmBackdrop');
-  var bodyEl   = document.getElementById('rmContent');
-  var titleEl  = document.getElementById('rmTitle');
-  var lastFocus = null;
-
-  function trap(e){
-    if(e.key==='Escape') closeModal();
-    if(e.key==='Tab'){
-      var f = backdrop.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])');
-      f = Array.prototype.filter.call(f, function(el){return !el.disabled && el.offsetParent!==null;});
-      if(!f.length) return;
-      var first=f[0], last=f[f.length-1];
-      if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
-      else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
-    }
-  }
-  function openModal(title, html, focusBack){
-  lastFocus = focusBack || document.activeElement;
-  titleEl.textContent = title || 'Details';
-  bodyEl.innerHTML = html || '';
-  // Reset scroll so every popup starts at the top
-    bodyEl.scrollTop = 0;                      // reset immediately
-    requestAnimationFrame(function(){          // and once more after it becomes visible
-      bodyEl.scrollTop = 0;
+    // Mobile menu
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      var m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+      m.classList.toggle('flex');
     });
 
-  /* NEW: make it feel like it opens from the Read more button */
-  var trigger = focusBack || document.activeElement;
-  var rect = trigger && trigger.getBoundingClientRect ? trigger.getBoundingClientRect() : null;
-  var xSide = rect ? ((rect.left + rect.width/2) < (window.innerWidth/2) ? 'left' : 'right') : '50%';
-  var origin = xSide + ' top';
-  document.querySelector('#rmBackdrop .rm-modal').style.transformOrigin = origin;
+    // FAB
+    var fab = document.getElementById('cfab'), pop = document.getElementById('cpop');
+    fab.addEventListener('click', function(e) { e.stopPropagation(); pop.classList.toggle('open'); });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#cpop') && !e.target.closest('#cfab')) pop.classList.remove('open');
+    });
 
-  /* then open */
-  backdrop.classList.add('open');
-  document.body.classList.add('rm-open');
-  backdrop.querySelector('.rm-close').focus();
-  document.addEventListener('keydown', trap);
-  }
-  function closeModal(){
-    backdrop.classList.remove('open');
-    document.body.classList.remove('rm-open');
-    document.removeEventListener('keydown', trap);
-    if(lastFocus && lastFocus.focus){ lastFocus.focus({preventScroll:true}); }
-  // Clean up scroll for next time
-     bodyEl.scrollTop = 0;
-  }
-  backdrop.addEventListener('mousedown', function(e){ if(e.target===backdrop) closeModal(); });
-  backdrop.querySelector('.rm-close').addEventListener('click', closeModal);
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
 
-  // Intercept EVERY existing Read more summary
-  document.addEventListener('click', function(e){
-    var summary = e.target.closest && e.target.closest('summary.readmore');
-    if(!summary) return;
-    var d = summary.parentElement; // <details>
-    var card = summary.closest('.xp-card, .proj-card, .card, .entry, section');
-    var titleNode = card && (card.querySelector('.xp-title, h3, h2') || card);
-    var title = summary.dataset.rmTitle || (titleNode ? (titleNode.textContent || '').trim() : 'Details');
-    var acc = d.querySelector('.acc-body');
-    if(!acc) return;
-    e.preventDefault(); // stop native accordion toggle
-    openModal(title, acc.innerHTML, summary);
-    // ensure the accordion stays closed (for consistent layout)
-    setTimeout(function(){ if(d.open) d.open=false; }, 0);
-  }, true);
-})();
-</script>
-  
+    // Active nav highlight on scroll
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', function() {
+      var pos = window.scrollY + 80;
+      sections.forEach(function(s) {
+        if (pos >= s.offsetTop && pos < s.offsetTop + s.offsetHeight) {
+          navLinks.forEach(function(l) { l.classList.remove('active'); });
+          var active = document.querySelector('.nav-link[href="#' + s.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
