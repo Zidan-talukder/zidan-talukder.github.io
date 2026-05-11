@@ -147,16 +147,16 @@
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
     <div class="max-w-5xl mx-auto px-5">
       <nav class="flex items-center justify-between py-3">
-        <a href="#home"><img src="robot.png" alt="Zidan Talukder" class="h-12 w-auto"></a>
+        <a href="#home">
+          <img src="robot.png" alt="Zidan Talukder" class="h-12 w-auto" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIgZmlsbD0iIzFhNTZkYiIvPjx0ZXh0IHg9IjEyIiB5PSIxNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSJib2xkIj5aVDwvdGV4dD48L3N2Zz4='">
+        </a>
         <div class="hidden md:flex items-center gap-1 text-sm font-medium text-gray-500">
           <a href="#home" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">About</a>
-          <a href="#competitions" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Competitions</a>
-          <a href="#projects" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Projects</a>
-          <a href="#experience" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Experience</a>
+          <a href="#projects" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Capstone Research</a>
+          <a href="#experience" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Experience & Leadership</a>
           <a href="#pubs" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Publications</a>
           <a href="#achievements" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Achievements</a>
           <a href="#personal" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Background</a>
-          <!-- <a href="#gallery" class="nav-link px-3 py-1.5 rounded-md hover:bg-gray-50">Gallery</a> -->
         </div>
         <!-- mobile hamburger placeholder -->
         <button id="menuBtn" class="md:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100">
@@ -168,13 +168,11 @@
       <!-- Mobile menu -->
       <div id="mobileMenu" class="hidden md:hidden pb-3 flex-col gap-1 text-sm font-medium text-gray-600">
         <a href="#home" class="block px-3 py-2 rounded-md hover:bg-gray-50">About</a>
-        <a href="#competitions" class="block px-3 py-2 rounded-md hover:bg-gray-50">Competitions</a>
-        <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-50">Projects</a>
-        <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-50">Experience</a>
+        <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-50">Capstone Research</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-50">Experience & Leadership</a>
         <a href="#pubs" class="block px-3 py-2 rounded-md hover:bg-gray-50">Publications</a>
         <a href="#achievements" class="block px-3 py-2 rounded-md hover:bg-gray-50">Achievements</a>
         <a href="#personal" class="block px-3 py-2 rounded-md hover:bg-gray-50">Background</a>
-        <!-- <a href="#gallery" class="block px-3 py-2 rounded-md hover:bg-gray-50">Gallery</a> -->
       </div>
     </div>
   </header>
@@ -184,40 +182,35 @@
     <!-- HERO -->
     <section id="home" class="grid md:grid-cols-5 gap-12 items-center py-16 md:py-20 fade-up">
       <div class="md:col-span-2 flex justify-center md:justify-start">
-        <div class="relative">
+        <div class="relative w-56 md:w-full">
           <div class="absolute inset-0 rounded-2xl bg-blue-100 translate-x-3 translate-y-3"></div>
           <img src="Picture1_X.jpg" alt="MD. Zidan Talukder"
-            class="relative w-56 md:w-full rounded-2xl object-cover shadow-sm border border-gray-100">
+            class="relative w-full rounded-2xl object-cover shadow-sm border border-gray-100" onerror="this.src='https://via.placeholder.com/400x500.png?text=MD.+Zidan+Talukder'">
         </div>
       </div>
       <div class="md:col-span-3 fade-up fade-up-1">
         <h1 class="serif text-4xl md:text-5xl leading-tight mb-5 text-gray-900">MD. Zidan<br><em>Talukder</em></h1>
         <p class="text-gray-500 leading-relaxed mb-3 text-[15px]">
-          I build intelligent, autonomous systems. My hands-on experience spans international competitions — the
-          University Rover Challenge (Field Robotics) and CanSat Competition (Space Autonomy) — and embedded ML
-          solutions like an EMG-controlled robotic hand.
+          I build intelligent systems at the intersection of robust mechatronics and Embodied AI. My foundation spans space autonomy (CanSat) and field robotics, where I engineered a Mars Rover science payload focused on life detection from soil and rock samples. 
         </p>
-        <p class="text-gray-400 text-sm leading-relaxed mb-7">
-          Currently expanding expertise in robot learning: SLAM, path planning, and computer vision for deployed
-          autonomy.
+        <p class="text-gray-500 text-[15px] leading-relaxed mb-7">
+          Building on this biological integration and my research in sEMG-controlled prosthetics, my focus is now evolving toward <strong>soft robotics and bio-inspired autonomy</strong>. I am passionate about engineering adaptable, biologically informed machines capable of safely interacting with unstructured environments.
         </p>
         <div class="flex flex-wrap gap-3">
-          <a href="https://drive.google.com/file/d/1z20UEKb-9ltn-S-wSXEI25ILiuOmzFNY/view?usp=sharing" target="_blank"
+          <a href="#" target="_blank"
             class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors">
             <span>📄</span> Curriculum Vitae
-            <span class="opacity-70 text-xs">Apr 2026</span>
+            <span class="opacity-70 text-xs">May 2026</span>
           </a>
-          <a href="https://drive.google.com/file/d/1VkSFmFV4nJXqQtxbAi1pNF7o52orfUJz/view?usp=drive_link"
-            target="_blank"
+          <a href="#" target="_blank"
             class="inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🔗 Transcript
           </a>
-          <a href="https://drive.google.com/file/d/16_YF5sX-jdS2l96_J2gGEecetvfKdnmZ/view?usp=sharing" target="_blank"
+          <a href="#" target="_blank"
             class=" inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🔗 Recommendation Letters
           </a>
-          <a href="https://drive.google.com/file/d/1e-BK-LIoHOYalHuxkz_nrfV4NPLvYuk0/view?usp=drive_link"
-            target="_blank"
+          <a href="#" target="_blank"
             class=" inline-flex items-center gap-2 bg-gray-50 text-gray-700 text-sm font-medium px-4 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 transition-colors">
             🎖️ IELTS
           </a>
@@ -225,113 +218,24 @@
       </div>
     </section>
 
-    <!-- DIVIDER -->
     <div class="border-t border-gray-100"></div>
 
-    <!-- COMPETITIONS -->
-    <section id="competitions" class="pt-16 pb-10">
-      <div class="section-line pt-5 mb-10">
-        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Prestigious Competitions</h2>
-      </div>
-
-      <div class="space-y-6">
-
-        <!-- CanSat -->
-        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
-          <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
-            <img src="CanSat.png" alt="UIU CanSat 2024" class="w-full h-full object-contain">
-          </div>
-          <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
-            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-lg font-semibold text-gray-900 leading-tight">CanSat Competition 2024</h3>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-                  <span class="flex items-center gap-1"><span>📍</span> Virginia, USA</span>
-                  <span class="text-gray-300">|</span>
-                  <span>Team Lead &mdash; UIU CanSat</span>
-                  <span class="text-gray-300">|</span>
-                  <span>Jan &ndash; Jul 2024</span>
-                  <span class="text-gray-300">|</span>
-                  <a href="https://www.cansatcompetition.com" target="_blank"
-                    class="text-accent hover:underline">Official site ↗</a>
-                </div>
-                <p class="text-xs text-gray-400">Organizers: American Astronautical Society &middot; U.S. Naval Research
-                  Laboratory &middot; NASA</p>
-              </div>
-              <span
-                class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
-                🏆 11th Global &middot; 3rd Asia
-              </span>
-            </div>
-            <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
-              <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link"
-                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Technical Design
-                Report</a>
-              <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing"
-                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Flight Video</a>
-              <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank"
-                class="inline-flex items-center gap-1.5 text-accent hover:underline">&lt;/&gt; Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- URC -->
-        <div class="entry-card rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
-          <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
-            <img src="Rover43.jpeg" alt="UIU Mars Rover" class="w-full h-full object-contain">
-          </div>
-          <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
-            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-              <div class="flex flex-col gap-1">
-                <h3 class="text-lg font-semibold text-gray-900 leading-tight">University Rover Challenge 2022</h3>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-                  <span class="flex items-center gap-1"><span>📍</span> Utah, USA</span>
-                  <span class="text-gray-300">|</span>
-                  <span>Science Team Lead &mdash; UIU Mars Rover</span>
-                  <span class="text-gray-300">|</span>
-                  <span>May 2021 &ndash; Aug 2022</span>
-                  <span class="text-gray-300">|</span>
-                  <a href="https://urc.marssociety.org" target="_blank" class="text-accent hover:underline">Official
-                    site ↗</a>
-                </div>
-                <p class="text-xs text-gray-400">Organizers: The Mars Society</p>
-              </div>
-              <span
-                class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
-                🏆 13th Global &middot; 1st Asia
-              </span>
-            </div>
-            <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
-              <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link"
-                target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Science Plan
-                Report</a>
-              <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank"
-                class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Field Video</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="border-t border-gray-100"></div>
-
-    <!-- CAPSTONE -->
+    <!-- CAPSTONE (Projects Section) -->
     <section id="projects" class="pt-16 pb-10">
       <div class="section-line pt-5 mb-10">
         <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Capstone Research Project</h2>
       </div>
 
-      <div class="rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
-        <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-100" style="min-height: 180px;">
-          <img src="prosthetic_hand43.jpg" alt="sEMG Prosthetic Hand" class="w-full h-full object-contain">
+      <div class="rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+        <div class="sm:w-44 md:w-52 flex-shrink-0 bg-gray-50 flex items-center justify-center p-3" style="min-height: 180px;">
+          <img src="prosthetic_hand43.jpg" alt="sEMG Prosthetic Hand" class="w-full h-full object-contain rounded-lg" onerror="this.src='https://via.placeholder.com/400x300.png?text=sEMG+Hand'">
         </div>
         <div class="flex flex-col flex-1 p-5 md:p-6 gap-3">
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
             <div class="flex flex-col gap-1">
               <h3 class="text-lg font-semibold text-gray-900 leading-tight">sEMG Signal-based Prosthetic Hand Control
                 using Embedded ML (TinyML) with Deep Neural Network</h3>
-              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500 mt-1">
                 <span>Dept. of EEE, UIU</span>
                 <span class="text-gray-300">|</span>
                 <span>Spring 2023</span>
@@ -339,105 +243,191 @@
                 <span>Arduino Nano 33 BLE &middot; Edge Impulse &middot; C++</span>
               </div>
             </div>
-            <span
-              class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
+            <span class="self-start flex-shrink-0 bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 whitespace-nowrap">
               🎖️ Best Capstone Award
             </span>
           </div>
-          <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-100 text-sm">
-            <a href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=sharing" target="_blank"
-              class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Paper</a>
-            <a href="https://drive.google.com/file/d/1DqRLsrOk8nRpEfaWjdnHGyE6FvJJFHbE/view?usp=drive_link"
-              target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Demo Video</a>
+          <div class="flex flex-wrap items-center gap-4 mt-auto pt-4 border-t border-gray-50 text-sm">
+            <a href="https://drive.google.com/file/d/132cstOZ9nX1ZSxNKcEOl8y5JiLyCt_1q/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📜 Certificate</a>
+            <a href="#" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Paper</a>
+            <a href="#" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Demo Video</a>
           </div>
         </div>
       </div>
 
       <p class="text-sm text-gray-400 mt-4">
         <strong class="text-gray-600">Undergraduate Projects:</strong>
-        <a href="https://drive.google.com/file/d/1D_IOPqm68PkJXHAhYom1QU3zNjrdB5V/view?usp=drive_link" target="_blank"
-          class="text-accent hover:underline ml-1">[Link]</a>
+        <a href="#" class="text-accent hover:underline ml-1">[Link]</a>
       </p>
     </section>
 
     <div class="border-t border-gray-100"></div>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE & LEADERSHIP (Combined Section) -->
     <section id="experience" class="pt-16 pb-10">
       <div class="section-line pt-5 mb-10">
-        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Professional Experience</h2>
+        <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Experience & Leadership</h2>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://uiu.ac.bd/" target="_blank">
-            <img src="uiu.png" alt="UIU" class="h-7 object-contain">
-          </a>
-          <div>
-            <p class="text-sm font-medium text-gray-900 leading-snug">United International University</p>
-            <p class="text-xs text-gray-500 mt-0.5">Research Assistant (Solar-Grid Cooking Device)</p>
-            <p class="text-xs text-gray-400 mt-0.5">Oct 2024 – Aug 2025</p>
+      <!-- Research & Applied Robotics Experience -->
+      <div class="mb-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-2">Research & Applied Robotics Experience</h3>
+        
+        <div class="space-y-5">
+          <!-- RA Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-100" style="min-height: 140px;">
+              <img src="https://www.uiu.ac.bd/wp-content/themes/uiu-main/img/menu-background.jpg" alt="UIU Campus" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 leading-tight">Research Assistant (RA)</h4>
+                  <p class="text-sm font-medium text-gray-600 mt-1">United International University & Tearfund</p>
+                </div>
+                <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">Oct '24 – Aug '25</span>
+              </div>
+              <div class="flex flex-wrap gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📜 Certificate</a>
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📄 Project Brief</a>
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📷 Field Video</a>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/1uZTfu5nCa2yflHPkX5XWAHEWZu4AFcs3/view?usp=drive_link"
-              target="_blank" class="text-accent hover:underline">📄 Project Brief</a>
-            <a href="https://drive.google.com/file/d/135jboxuW9K8TOysFCTkEOppDZABA6ubR/view?usp=sharing" target="_blank"
-              class="text-accent hover:underline">📷 Field Video</a>
-            <a href="https://drive.google.com/file/d/1roeL_V-Q1eG4QfAHl5bZfgGP9Uteaobo/view?usp=sharing" target="_blank"
-              class="text-accent hover:underline">📜 Certificate</a>
+
+          <!-- CanSat Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-50 flex items-center justify-center p-3" style="min-height: 140px;">
+              <img src="CanSat.png" alt="CanSat ASTRO" class="w-full h-full object-contain rounded-lg" onerror="this.src='https://via.placeholder.com/400x300.png?text=CanSat'">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                    Team Lead <span class="text-gray-400 font-normal ml-1">| UIU ASTRO</span>
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-gray-600 mt-1">
+                    <span>CanSat Competition 2024</span>
+                    <span class="text-gray-300">|</span>
+                    <span class="flex items-center gap-1">📍 Virginia, USA</span>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://www.cansatcompetition.com" target="_blank" class="text-accent hover:underline font-normal">Official site ↗</a>
+                  </div>
+                  <p class="text-xs text-gray-400 mt-0.5">Organizers: American Astronautical Society · U.S. Naval Research Laboratory · NASA</p>
+                </div>
+                <div class="flex flex-col sm:items-end gap-2 mt-2 sm:mt-0 flex-shrink-0">
+                  <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">Jan '24 – July '24</span>
+                  <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2 py-0.5 rounded border border-blue-100 whitespace-nowrap">🏆 11th Global · 3rd Asia</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="https://drive.google.com/file/d/1qGeEPcp_je3fEUX_9NFsWsYrp-nmku_b/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📜 Certificate</a>
+                  <a href="https://drive.google.com/file/d/1HnG5jgWYUhh4HpYVgY6JR15Mb5ncUfQd/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Design Report</a>
+                  <a href="https://drive.google.com/drive/folders/17naLtsUC0FO2T3aCFMn-x4oFSPoLma1P?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Flight Video</a>
+                  <a href="https://github.com/Zidan-talukder/CanSat-Code/tree/main" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">&lt;/&gt; Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IAR Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-50 flex items-center justify-center p-4" style="min-height: 140px;">
+              <img src="IAR_logo.jpg" alt="IAR" class="max-h-16 object-contain mix-blend-multiply" onerror="this.src='https://via.placeholder.com/400x300.png?text=IAR'">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 leading-tight">Research Intern</h4>
+                  <p class="text-sm font-medium text-gray-600 mt-1">UIU Institute for Advanced Research (IAR)</p>
+                </div>
+                <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">Oct '23 – Dec '23</span>
+              </div>
+              <div class="flex flex-wrap gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📝 Draft Writing</a>
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">&lt;/&gt; Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mars Rover Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-50 flex items-center justify-center p-3" style="min-height: 140px;">
+              <img src="Rover43.jpeg" alt="Mars Rover" class="w-full h-full object-contain rounded-lg" onerror="this.src='https://via.placeholder.com/400x300.png?text=Mars+Rover'">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                    Science Team Lead <span class="text-gray-400 font-normal ml-1">| UIU Mars Rover</span>
+                  </h3>
+                  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-gray-600 mt-1">
+                    <span>University Rover Challenge 2022</span>
+                    <span class="text-gray-300">|</span>
+                    <span class="flex items-center gap-1">📍 Utah, USA</span>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://urc.marssociety.org" target="_blank" class="text-accent hover:underline font-normal">Official site ↗</a>
+                  </div>
+                  <p class="text-xs text-gray-400 mt-0.5">Organizers: The Mars Society</p>
+                </div>
+                <div class="flex flex-col sm:items-end gap-2 mt-2 sm:mt-0 flex-shrink-0">
+                  <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">May '21 – Aug '22</span>
+                  <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2 py-0.5 rounded border border-blue-100 whitespace-nowrap">🏆 13th Global · 1st Asia</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="https://drive.google.com/file/d/1KLajBepGjOtC7c2Dzbj5wLNFtfHZz5-g/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📜 Certificate</a>
+                  <a href="https://drive.google.com/file/d/1xL_s8ooRO4aPbxXObL62g1MJ6YsRnvd-/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">📄 Science Plan Report</a>
+                  <a href="https://youtu.be/elEY-_VirTA?si=vbrBcmQ8KXhQigED&t=215" target="_blank" class="inline-flex items-center gap-1.5 text-accent hover:underline">🎥 Field Video</a>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://www.pantechsolutions.net/" target="_blank">
-            <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech"
-              class="h-7 object-contain" onerror="this.style.display='none'">
-          </a>
-          <div>
-            <p class="text-sm font-medium text-gray-900 leading-snug">Pantech Solutions Pvt Ltd</p>
-            <p class="text-xs text-gray-500 mt-0.5">Internship (AI / ML / DL)</p>
-            <p class="text-xs text-gray-400 mt-0.5">Mar 2025 – Jun 2025</p>
+      <!-- Academic & Industry Experience -->
+      <div>
+        <h3 class="text-xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-2">Academic & Industry Experience</h3>
+        
+        <div class="space-y-5">
+          <!-- AI Intern Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-50 flex items-center justify-center p-4" style="min-height: 140px;">
+              <img src="https://www.pantechsolutions.net/wp-content/uploads/2021/01/pantechlogo_1_.png" alt="Pantech" class="max-h-12 object-contain mix-blend-multiply" onerror="this.style.display='none'">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 leading-tight">AI Internship</h4>
+                  <p class="text-sm font-medium text-gray-600 mt-1">Pantech Solutions Pvt Ltd. <span class="text-gray-400 font-normal">(remote)</span></p>
+                </div>
+                <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">Mar '25 – June '25</span>
+              </div>
+              <div class="flex flex-wrap gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📜 Certificates</a>
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📚 Project Lists</a>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/11DsRAxm1FFhitKg3-tCDUO8XniyzITMQ/view?usp=sharing" target="_blank"
-              class="text-accent hover:underline">📚 Project Lists</a>
-            <a href="https://drive.google.com/drive/folders/1cSdvk_jtTBZ1gwvnLNENH54JiwGty8GT?usp=drive_link"
-              target="_blank" class="text-accent hover:underline">📜 Certificates</a>
+
+          <!-- UGA Card -->
+          <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden flex flex-col sm:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div class="sm:w-48 flex-shrink-0 bg-gray-100" style="min-height: 140px;">
+              <img src="https://www.uiu.ac.bd/wp-content/themes/uiu-main/img/menu-background.jpg" alt="UIU Campus" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-3 justify-center">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 leading-tight">Undergraduate Assistant</h4>
+                  <p class="text-sm font-medium text-gray-600 mt-1">Department of EEE, UIU</p>
+                </div>
+                <span class="text-xs text-gray-500 font-medium whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full border border-gray-200">Jan '20 – June '20</span>
+              </div>
+              <div class="flex flex-wrap gap-4 mt-2 pt-3 border-t border-gray-50 text-sm">
+                  <a href="#" class="inline-flex items-center gap-1 text-accent hover:underline">📜 Appointment Letter</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://iar.uiu.ac.bd/" target="_blank">
-            <img src="IAR_logo.jpg" alt="IAR" class="h-7 object-contain" onerror="this.style.display='none'">
-          </a>
-          <div>
-            <p class="text-sm font-medium text-gray-900 leading-snug">UIU Institute for Advanced Research (IAR)</p>
-            <p class="text-xs text-gray-500 mt-0.5">Research Intern (EEG Signal)</p>
-            <p class="text-xs text-gray-400 mt-0.5">Oct 2023 – Dec 2023</p>
-          </div>
-          <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/19e5wDL0rZjZ33wj2HfY-z-VsN8O_1Qev/view?usp=sharing" target="_blank"
-              class="text-accent hover:underline">📝 Draft Writing</a>
-            <a href="https://github.com/Zidan-talukder/BCI-Code" target="_blank"
-              class="text-accent hover:underline">&lt;/&gt; Code</a>
-          </div>
-        </div>
-
-        <div class="entry-card bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3">
-          <a href="https://uiu.ac.bd/" target="_blank">
-            <img src="uiu.png" alt="EEE UIU" class="h-7 object-contain">
-          </a>
-          <div>
-            <p class="text-sm font-medium text-gray-900 leading-snug">Dept. of EEE, UIU</p>
-            <p class="text-xs text-gray-500 mt-0.5">Undergraduate Assistant</p>
-            <p class="text-xs text-gray-400 mt-0.5">Jan 2020 – Jun 2020</p>
-          </div>
-          <div class="flex flex-col gap-1 text-xs mt-auto">
-            <a href="https://drive.google.com/file/d/19Cn31OWv1CI8o7gUCci00V-1pUYDOe0x/view?usp=drive_link"
-              target="_blank" class="text-accent hover:underline">📜 Appointment Letter</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -456,9 +446,7 @@
             Zaman A., Masud A., Hossain A., <strong>Talukder Z.</strong>, Airin A., Khan Y., et al.
             <em>"Development of a Mars Rover Prototype: Autonomous Navigation and Life Exploration."</em>
             Targeting: IEEE Systems Journals / IEEE Access.
-            <a class="doi-chip"
-              href="https://drive.google.com/file/d/1Aszh8LkrfHWDk5LFfSOCxECf3GFt2lv8/view?usp=drive_link"
-              target="_blank">Draft on request</a>
+            <a class="doi-chip" href="#" target="_blank">Draft on request</a>
           </p></div>
           <div class="space-y-2">
             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Manuscript · In Preparation</p>
@@ -477,10 +465,8 @@
             <em>"sEMG Signal-based Prosthetic Hand Control using Embedded Machine Learning with Deep Neural
               Network."</em>
             6th ICEEICT, 2024.
-            <a class="doi-chip" href="https://doi.org/10.1109/ICEEICT62016.2024.10534475" target="_blank">DOI ↗</a>
-            <a class="doi-chip"
-              href="https://drive.google.com/file/d/1-_pMTqYSvMSOkUH2Bm7ahfK0O_mHXAhv/view?usp=drive_link"
-              target="_blank">PDF</a>
+            <a class="doi-chip" href="#" target="_blank">DOI ↗</a>
+            <a class="doi-chip" href="#" target="_blank">PDF</a>
           </p>
         </div>
       </div>
@@ -501,18 +487,16 @@
               <span class="text-lg mt-0.5">🏆</span>
               <div>
                 <p class="text-sm font-medium text-gray-900">CanSat Competition 2024</p>
-                <p class="text-xs text-gray-500 mt-0.5">11th globally · 3rd Asia · among 80 teams</p>
-                <a href="https://drive.google.com/file/d/1g0JyTbeGZMUJRCj7zabu5Y6a6hkr6S5H/view?usp=sharing"
-                  target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+                <p class="text-xs text-gray-500 mt-0.5">11th globally · 3rd Asia · Top 41 finalists out of 80 teams</p>
+                <a href="https://drive.google.com/file/d/1fXzgR9JPlAYgO9_C4j5iQg0FK9-Hlx8H/view?usp=sharing" class="text-xs text-accent hover:underline" target="_blank">[Ranking]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
               <span class="text-lg mt-0.5">🏆</span>
               <div>
                 <p class="text-sm font-medium text-gray-900">University Rover Challenge 2022</p>
-                <p class="text-xs text-gray-500 mt-0.5">13th globally · 1st Asia · among 99 teams</p>
-                <a href="https://drive.google.com/file/d/1Ls3y3L3X09OZCDPhnfdrE-Rf-HCPKZek/view?usp=sharing"
-                  target="_blank" class="text-xs text-accent hover:underline">[Certificates]</a>
+                <p class="text-xs text-gray-500 mt-0.5">13th globally · 1st Asia · Top 36 finalists out of 99 teams</p>
+                <a href="https://drive.google.com/file/d/1XqLeasZvfZTbPTkCUzYXG1cXVx4zUR_n/view?usp=sharing" class="text-xs text-accent hover:underline" target="_blank">[Ranking]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -520,8 +504,7 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">Best Capstone Project Award</p>
                 <p class="text-xs text-gray-500 mt-0.5">Spring 2023 · Dept. of EEE, UIU</p>
-                <a href="https://drive.google.com/file/d/1Cl2Pxlk-JTHDsogdvqNcZfECh1_nvNi6/view?usp=sharing"
-                  target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+                <a href="https://drive.google.com/file/d/1xbKkSK0j6fbpQ6YUmdHYHaiaQQyul274/view?usp=sharing" class="text-xs text-accent hover:underline" target="_blank">[Official Email]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -529,6 +512,7 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">Innovation Contest — ICEEICT 2024</p>
                 <p class="text-xs text-gray-500 mt-0.5">2nd Runner-Up among 101 projects</p>
+                <a href="https://drive.google.com/file/d/1OmzZD9qCkk77-WdTQ3iiusyZU6fWcmJ3/view?usp=sharing" class="text-xs text-accent hover:underline" target="_blank">[Ranking]</a>
               </div>
             </div>
             <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
@@ -536,8 +520,7 @@
               <div>
                 <p class="text-sm font-medium text-gray-900">Merit-based Scholarships</p>
                 <p class="text-xs text-gray-500 mt-0.5">United International University</p>
-                <a href="https://drive.google.com/file/d/1BmE3I8ev1Rs3ApodOp88TzBQTxLy3o45/view?usp=sharing"
-                  target="_blank" class="text-xs text-accent hover:underline">[Certificate]</a>
+                <a href="#" class="text-xs text-accent hover:underline">[Certificate]</a>
               </div>
             </div>
           </div>
@@ -545,8 +528,7 @@
         <div>
           <h3 class="text-base font-semibold text-gray-700 mb-4">
             Grants
-            <a href="https://drive.google.com/file/d/13idi3dTpLefFJ-bzhNjreIE6p8rEDAp-/view?usp=drive_link"
-              target="_blank" class="text-xs text-accent font-normal ml-1 hover:underline">[UIU Letter]</a>
+            <a href="#" class="text-xs text-accent font-normal ml-1 hover:underline">[UIU Letter]</a>
           </h3>
           <div class="space-y-3">
             <p class="text-xs uppercase tracking-widest text-gray-400 font-medium">Travel Grants</p>
@@ -690,182 +672,11 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY (Hidden for preview brevity) -->
     <div style="display:none">
       <div class="border-t border-gray-100"></div>
       <section id="gallery" class="pt-16 pb-10">
-        <div class="section-line pt-5 mb-10">
-          <h2 class="serif text-3xl md:text-4xl text-gray-900 mt-4">Gallery</h2>
-        </div>
-
-        <!-- Filter tabs -->
-        <div class="flex flex-wrap gap-2 mb-8">
-          <button onclick="filterGallery('all')" data-filter="all"
-            class="gallery-filter-btn active-filter text-sm font-medium px-4 py-1.5 rounded-full border border-gray-900 bg-gray-900 text-white transition-colors">
-            All
-          </button>
-          <button onclick="filterGallery('cansat')" data-filter="cansat"
-            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
-            CanSat
-          </button>
-          <button onclick="filterGallery('rover')" data-filter="rover"
-            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
-            Mars Rover
-          </button>
-          <button onclick="filterGallery('projects')" data-filter="projects"
-            class="gallery-filter-btn text-sm font-medium px-4 py-1.5 rounded-full border border-gray-200 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-colors">
-            Projects
-          </button>
-        </div>
-
-        <!-- Masonry grid -->
-        <div id="galleryGrid" class="columns-2 md:columns-3 gap-3 space-y-3">
-
-          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — ASTRO Probe"
-            data-desc="UIU CanSat 2024 · Virginia, USA · 11th globally, 3rd in Asia">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(0)">
-              <img src="CanSat.png" alt="CanSat ASTRO Probe"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">CanSat — ASTRO Probe</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — Exploded View"
-            data-desc="Internal components: heatshield, parachute chamber, circuits, sensors">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(1)">
-              <img src="CanSat_explode.jpg" alt="CanSat Exploded View"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">CanSat — Exploded View</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="cansat" data-title="CanSat — Competition Display"
-            data-desc="UIU CanSat team setup at the 2024 competition, Virginia USA">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(2)">
-              <img src="Cansat43.jpeg" alt="CanSat Competition"
-                class="w-full object-cover transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">CanSat — Competition Display</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="rover" data-title="Mars Rover — MAVEN"
-            data-desc="UIU Mars Rover at University Rover Challenge 2022 · Utah, USA · 13th globally, 1st in Asia">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(3)">
-              <img src="Rover43.jpeg" alt="Mars Rover MAVEN"
-                class="w-full object-cover transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">Mars Rover — MAVEN</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="projects"
-            data-title="Prosthetic Hand — sEMG Control"
-            data-desc="EMG-controlled robotic hand — 97.2% training accuracy, 87.6% real-time on Arduino Nano 33 BLE">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(4)">
-              <img src="prosthetic_hand43.jpg" alt="Prosthetic Hand"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">Prosthetic Hand — sEMG Control</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="projects"
-            data-title="Autonomous Wildlife Monitoring"
-            data-desc="Drone + UGV system for autonomous field monitoring and wildlife intrusion response">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(5)">
-              <img src="Wild43.png" alt="Wildlife Monitoring"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">Autonomous Wildlife Monitoring</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-item break-inside-avoid" data-category="projects" data-title="Ground Control Station"
-            data-desc="Custom GCS dashboard for real-time telemetry monitoring during CanSat flight">
-            <div class="relative overflow-hidden rounded-xl bg-gray-100 cursor-pointer group" onclick="openLightbox(6)">
-              <img src="Monitor.png" alt="Ground Control Station"
-                class="w-full object-contain transition-transform duration-300 group-hover:scale-105">
-              <div
-                class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-all duration-300 flex items-end">
-                <div
-                  class="p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <p class="text-white text-xs font-medium leading-tight">Ground Control Station</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </section>
-    </div>
-
-    <!-- LIGHTBOX -->
-    <div id="lightbox"
-      class="fixed inset-0 z-[100] bg-gray-950/90 backdrop-blur-sm hidden items-center justify-center p-4"
-      onclick="closeLightboxOnBackdrop(event)">
-      <!-- Close -->
-      <button onclick="closeLightbox()"
-        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <!-- Prev -->
-      <button onclick="shiftLightbox(-1)"
-        class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <!-- Next -->
-      <button onclick="shiftLightbox(1)"
-        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-      <!-- Image + caption -->
-      <div class="flex flex-col items-center gap-4 max-w-4xl w-full" onclick="event.stopPropagation()">
-        <img id="lbImg" src="" alt="" class="max-h-[75vh] max-w-full rounded-xl object-contain">
-        <div class="text-center">
-          <p id="lbTitle" class="text-white font-medium text-base"></p>
-          <p id="lbDesc" class="text-gray-400 text-sm mt-1"></p>
-          <p id="lbCounter" class="text-gray-600 text-xs mt-2"></p>
-        </div>
-      </div>
     </div>
 
     <!-- UPDATES -->
